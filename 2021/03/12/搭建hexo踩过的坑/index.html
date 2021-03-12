@@ -1,0 +1,753 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-12 19:57" pubdate>
+        March 12, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <p>你是否想拥有属于自己的博客？你是否无奈与自己不会写网站而烦恼？</p>
+<p>不要担心，本系列教程将会实现你白嫖的愿望，连服务器都不需要买，就算没有任何编程基础也可以学会的搭建博客教程</p>
+<p>下面来看看这些好看的个人博客：</p>
+<p><a target="_blank" rel="noopener" href="http://fech.in/">http://fech.in/</a></p>
+<p><a target="_blank" rel="noopener" href="https://xaoxuu.com/">https://xaoxuu.com/</a></p>
+<p><a target="_blank" rel="noopener" href="https://nexmoe.com/">https://nexmoe.com/</a></p>
+<p><a target="_blank" rel="noopener" href="https://sakura.hojun.cn/">https://sakura.hojun.cn/</a></p>
+<p>以上的博客你是否都心动了呢？我想说的是，它们都是由hexo搭建的，等你学完了基础和进阶篇，上面展示的博客你都可以实现，就让我们一步步来吧！</p>
+<p>这是一个系列教程，有基础篇和进阶篇，让我们看看这两个教程实现的效果</p>
+<ul>
+<li>【基础篇】</li>
+</ul>
+<ol>
+<li>学会安装相应需要的依赖软件</li>
+<li>学会更换主题</li>
+<li>学会基本的站点配置</li>
+<li>知道怎么生成文章并编辑</li>
+<li>上传你的博客并拥有一个可以访问的地址</li>
+</ol>
+<hr>
+<ul>
+<li>进阶篇</li>
+</ul>
+<ol>
+<li>学会用markdown基本语法编写你的文章</li>
+<li>学会如何搭建一个免费的图床并使用</li>
+<li>学会进一步配置主题并了解所有主题的基本功能</li>
+<li>拥有自己的域名并绑定</li>
+<li>使用一些插件让自己博客更完美</li>
+<li>备份</li>
+</ol>
+<hr>
+<p><strong><em>3\</em></strong>|<strong><em>0**</em></strong>搭建之前的准备**<br><strong><em>3\</em></strong>|<strong><em>1**</em></strong>安装nodejs**</p>
+<blockquote>
+<p>下载地址： <a target="_blank" rel="noopener" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+</blockquote>
+<p>选择windows安装包.msi安装</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-54-53.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-54-53.png" srcset="/img/loading.gif" alt="img"></a></p>
+<p>运行安装包，我们默认选择c盘</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-49-21.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-49-21.png" srcset="/img/loading.gif" alt="img"></a></p>
+<p>在这里选择Add to PATH然后点Next继续就行了</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-49-39.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-49-39.png" srcset="/img/loading.gif" alt="img"></a></p>
+<hr>
+<p><strong><em>3\</em></strong>|<strong><em>2**</em></strong>安装Git**</p>
+<blockquote>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
+</blockquote>
+<p>点这里即可下载最新版本，如果你的下载速度比较慢可以选择下面的链接下载</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.lanzous.com/i9s7tib">https://www.lanzous.com/i9s7tib</a></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-57-32.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_08-57-32.png" srcset="/img/loading.gif" alt="img"></a></p>
+<p>运行安装包，选择合适的安装位置，然后点Next</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_09-01-49.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/gtd/Snipaste_2020-02-29_09-01-49.png" srcset="/img/loading.gif" alt="img"></a></p>
+<p>后面的安装步骤全部只要点Next就行了，不需要我们多余配置</p>
+<p><a target="_blank" rel="noopener" href="https://i.loli.net/2020/02/29/jqTCDk6YSbwQOVz.png"><img src="https://i.loli.net/2020/02/29/jqTCDk6YSbwQOVz.png" srcset="/img/loading.gif" alt="Snipaste_2020-02-29_09-02-25.png"></a></p>
+<hr>
+<p><strong><em>3\</em></strong>|<strong><em>3**</em></strong>验证nodejs是否安装配置成功**</p>
+<p>我们安装完Git后，在桌面右键会有Git Bash Here，我们直接点开</p>
+<p><a target="_blank" rel="noopener" href="https://i.loli.net/2020/02/29/s1YhxtEILOlk4Xz.png"><img src="https://i.loli.net/2020/02/29/s1YhxtEILOlk4Xz.png" srcset="/img/loading.gif" alt="Snipaste_2020-02-29_09-05-54.png"></a></p>
+<p>会出来一个终端，我们分别执行下面的命令</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">$ <span class="hljs-keyword">node</span> <span class="hljs-title">-v</span><br>$ npm -v<br></code></pre></td></tr></table></figure>
+
+<p>如果输出了版本号，那么证明配置成功，如果没有版本号，请重新安装nodejs（检查是否勾选Add to Path），或者手动为nodejs添加环境变量</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/213.ophl1x6e4sp.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/213.ophl1x6e4sp.png" srcset="/img/loading.gif" alt="image"></a></p>
+<hr>
+<p><strong><em>3\</em></strong>|<strong><em>4**</em></strong>安装cnpm**</p>
+<p>在git bash里面执行下面的命令</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ npm install -g cnpm --registry=https:<span class="hljs-regexp">//</span>registry.npm.taobao.org<br></code></pre></td></tr></table></figure>
+
+<p><strong>检查cnpm是否安装成功</strong></p>
+<p>执行</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>cnpm -v <br></code></pre></td></tr></table></figure>
+
+<p>如果输出版本号就是安装成功了</p>
+<hr>
+<p><strong><em>4\</em></strong>|<strong><em>0**</em></strong>安装hexo和初始化博客**<br><strong><em>4\</em></strong>|<strong><em>1**</em></strong>安装hexo**</p>
+<p>在git bash执行下面的命令安装hexo</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">$ cnpm install hexo-<span class="hljs-keyword">cli</span> -g<br></code></pre></td></tr></table></figure>
+
+<p><strong><em>4\</em></strong>|<strong><em>2**</em></strong>初始化博客**</p>
+<p>选择一个文件夹，然后右键打开git bash</p>
+<p>例如：我在F盘新建了一个blog文件夹，就在blog文件夹下打开git bash</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-23-38.xgw9p9u10qr.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-23-38.xgw9p9u10qr.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后这里会显示你当前目录</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-25-37.w75xfc7uqwj.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-25-37.w75xfc7uqwj.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后执行</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">$ hexo <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
+
+<p>到<code>Install dependencies</code>的时候你可能会卡住，这是大多数人基本都会遇到的</p>
+<p>我们只需要在这里的时候结束命令，按<code>Ctrl + c</code>就可以结束命令</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-27-37.79mebxnx3oa.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-27-37.79mebxnx3oa.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后执行下面这个命令，就可以使用国内的镜像为你完成博客的初始化工作</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">$ cnpm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其他方法：</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://e.coding.net/huanhao/hexoblog.git">https://e.coding.net/huanhao/hexoblog.git</a></p>
+<p>cnpm install</p>
+</blockquote>
+<p>然后继续下面的步骤</p>
+<p>等待命令完成后，就完成了初始化，现在就可以预览我们的博客了</p>
+<p>执行下面这个命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">注意：请不要结束命令或者关闭终端<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>hexo s<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-31-47.jmi628mj35e.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-31-47.jmi628mj35e.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后会出来一段http开头的网址，我们复制下来然后在浏览器打开</p>
+<p>就会出现这么一个页面了</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-33-55.tyszma65r9.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-33-55.tyszma65r9.png" srcset="/img/loading.gif" alt="image"></a></p>
+<hr>
+<p><strong><em>5\</em></strong>|<strong><em>0**</em></strong>更换主题**</p>
+<p>你是否觉得上面的默认主题有点不好看呢？现在教你如何替换主题</p>
+<p>hexo的所有主题都在下面这个地址：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+</blockquote>
+<p>你可能会在这个地址看到很多好看的主题，但是我们要慢慢来，有些主题的配置难度还是很高的</p>
+<p>我们要找一个功能齐全，配置简单的主题练练手</p>
+<p>就是这个新手入门hexo必备的Next主题</p>
+<blockquote>
+<p>预览效果：<a target="_blank" rel="noopener" href="https://theme-next.org/">https://theme-next.org/</a></p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
+<p>配置文档：<a target="_blank" rel="noopener" href="https://theme-next.org/docs/getting-started/">https://theme-next.org/docs/getting-started/</a></p>
+</blockquote>
+<p>如你所见，其实每个主题都会包含这个三个东西</p>
+<ul>
+<li>预览效果</li>
+<li>项目地址</li>
+<li>配置文档</li>
+</ul>
+<p>点击主题的图片可以打开预览地址，点击主题的标题可以打开项目地址</p>
+<p>配置文档我们需要自己去项目地址找，大多数主题的项目地址都是英文，大家可以开翻译找一下</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-40-40.h10pzhd3ikj.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-40-40.h10pzhd3ikj.png" srcset="/img/loading.gif" alt="image"></a></p>
+<hr>
+<p><strong><em>5\</em></strong>|<strong><em>1**</em></strong>如何下载主题**</p>
+<h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><p>打开主题的项目地址后，点击<code>Clone or download</code></p>
+<p>然后复制https开头的地址</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-46-02.gnmyl5b7s2.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-46-02.gnmyl5b7s2.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后在你的博客文件夹下面打开git bash</p>
+<p>执行：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">复制的地址 themes</span>/主题名字<br></code></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-50-23.o7ukcdqwa8e.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-50-23.o7ukcdqwa8e.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>现在给你解释一下这个命令</p>
+<p>git clone 代表克隆，后面接上一串下载地址，最后面的themes/next是把文件夹下载到主题目录下，并把主题文件命名为next</p>
+<hr>
+<h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>如果你觉得比较麻烦，还有第二个办法</p>
+<p>打开主题项目地址，然后点击<code>Clone or download</code>，然后点击Download ZIP</p>
+<p>这样可以下载主题文件压缩包，前提是你已经登入了github（没有账号的，请自己注册一下）</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-53-14.hd54gibpilh.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-53-14.hd54gibpilh.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后解压压缩包，把文件夹放在博客目录下的themes目录，并把文件夹命名为主题的名字</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-56-33.xhx8o5z5d9.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_09-56-33.xhx8o5z5d9.png" srcset="/img/loading.gif" alt="image"></a></p>
+<hr>
+<p><strong><em>5\</em></strong>|<strong><em>2**</em></strong>修改配置文件**</p>
+<p>在博客的目录下有一个叫<code>_config.yml</code>的文件</p>
+<p>将它打开</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-01-51.gwst228nama.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-01-51.gwst228nama.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>找到<code>themes</code>这一行，然后将主题名字修改为next</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-02-23.58o49hkjdki.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-02-23.58o49hkjdki.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>这样的话，主题就成功更换了</p>
+<hr>
+<p><strong><em>5\</em></strong>|<strong><em>3**</em></strong>预览主题**</p>
+<p>在博客目录打开git bash</p>
+<p>执行</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
+
+<p>还是会出现一段浏览地址，我们在浏览器打开就行了</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-04-16.2dvd68y21dm.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-04-16.2dvd68y21dm.png" srcset="/img/loading.gif" alt="image"></a></p>
+<blockquote>
+<p>注意：有些主题你更换之后是暂时无法预览的，因为有的主题还需要安装它需要的依赖，这一般都会在主题的文档里面提到，只有安装它的依赖之后才可以正常预览，这里暂时不做说明，会在hexo教程进阶篇说到</p>
+</blockquote>
+<hr>
+<p><strong><em>6\</em></strong>|<strong><em>0**</em></strong>配置主题**</p>
+<p>这里不会做详细的配置介绍，在进阶篇会完整说明</p>
+<p>我们需要认识两个文件</p>
+<ul>
+<li>站点配置文件</li>
+</ul>
+<p>指的是博客根目录下的<code>_config.yml</code></p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-01-51.gwst228nama.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-01-51.gwst228nama.png" srcset="/img/loading.gif" alt="image"></a></p>
+<ul>
+<li>主题配置文件</li>
+</ul>
+<p>指的是某个主题下的<code>_config.yml</code></p>
+<p>它们的名字都叫<code>_config.yml</code>但是你不能弄混淆</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-11-13.qayjeoclrer.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-11-13.qayjeoclrer.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>在我们看主题文档配置的时候，是必须要分清这两个概念的，不然会报错</p>
+<p>我们先来几个基本的配置</p>
+<p><strong><em>6\</em></strong>|<strong><em>1**</em></strong>设置语言**</p>
+<p>在Next主题的文档里面提到了如何更换语言</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-45-34.i8xhol7d05.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-45-34.i8xhol7d05.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>它要求我们更改的是站点配置文件，并且给出了代码示范</p>
+<p>我们打开站点配置文件</p>
+<p>按照要求，将language的配置改成zh-CN，然后保存文件</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-46-29.tuonuuuk6mm.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-46-29.tuonuuuk6mm.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p><strong><em>6\</em></strong>|<strong><em>2**</em></strong>其他设置**</p>
+<p>现在再来尝试一个</p>
+<p>Next主题里面有个Scheme选项，可以更改主题的外观</p>
+<p>根据要求，我们需要更改的是主题配置文件</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-47-13.9mpo8qnzty.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-47-13.9mpo8qnzty.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>打开主题配置文件，我们尝试scheme改成双栏，也就是需要修改成Pisces</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-22-06.eq6mi8hrlka.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-22-06.eq6mi8hrlka.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>现在已经修改过两个配置了，为了检验是否修改成功，我们需要预览一下主题</p>
+<p>在博客根目录下执行</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
+
+<p>然后打开链接</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-49-17.j0ojrtmb8xm.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_10-49-17.j0ojrtmb8xm.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>可以看到都设置成功了</p>
+<p>因为这个主题的主题文档是英文的，所以可能配置起来不太方便，我这里有一个中文的</p>
+<p>是别人翻译的，不过现在不是最新版本的翻译</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">http://theme-next.iissnan.com/</a></p>
+</blockquote>
+<p>如果你有能力，可以自己挑一个主题进行简单配置，在进阶篇中会使用其他主题为你展示更详细的配置教程</p>
+<hr>
+<p><strong><em>7\</em></strong>|<strong><em>0**</em></strong>生成文章的编辑工具**</p>
+<p>在博客根目录下面执行：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">$ hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;文章链接&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>例如：你想创建一个名为”我的第一个博客“的文章</p>
+<p>可以执行：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">$ hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;my-first-blog&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>文章链接建议是英文，然后会显示你的文章生成的目录，每次生成的文章都固定在你的博客根目录下面的source/_posts下</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-10-30.ybyovivc8lp.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-10-30.ybyovivc8lp.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>可以看到是一个后缀为.md的文件，这个其实是一个markdown文件，如果你不知道markdown是什么，在进阶篇会告诉你，就算你不会markdown，你可以暂时把这个当成txt文件</p>
+<p>我建议你安装Typora编辑.md文件</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.typora.io/">https://www.typora.io/</a></p>
+</blockquote>
+<p>按照目录打开my-firsy-blog.md文件，可以看到一个横线上面有一段信息</p>
+<p>这里面是存放你博客信息的地方</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-16-37.oun3i88bw.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-16-37.oun3i88bw.png" srcset="/img/loading.gif" alt="image"></a></p>
+<ul>
+<li>title 文章标题</li>
+<li>date 文章日期</li>
+<li>tag 文章标签 （暂时不说明如何配置，进阶篇会讲到）</li>
+</ul>
+<p>然后这时候你可以修改文章标题，并且在横线下面输入你文章的内容</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-17-14.7x7sfa9t9m8.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-17-14.7x7sfa9t9m8.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>保存之后，你可以在博客根目录打开git bash</p>
+<p>执行</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>hexo s<br></code></pre></td></tr></table></figure>
+
+<p>记得：预览博客都是这个命令</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-22-11.eoh9owyqu4j.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-22-11.eoh9owyqu4j.png" srcset="/img/loading.gif" alt="image"></a></p>
+<hr>
+<p><strong><em>8\</em></strong>|<strong><em>0**</em></strong>部署你的博客**</p>
+<p>现在我们的博客都是只能本地预览，如何将我们的上传到一个地方，然后通过域名访问呢？</p>
+<p>你可能觉得需要一个服务器再买个域名绑定，我可以告诉你都不需要</p>
+<p><strong>github部署</strong></p>
+<p>创建一个仓库</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-49-41.bjily8bk23.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-49-41.bjily8bk23.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>仓库名必须是用户名 + .github.io</p>
+<p>然后勾选初始化README</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-51-22.58hhw0be4f9.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-51-22.58hhw0be4f9.png" srcset="/img/loading.gif" alt="image"></a></p>
+<blockquote>
+<p>我们暂时不能直接上传，需要进行一些配置，如下：</p>
+</blockquote>
+<p>接下来需要我们创建一个git秘钥</p>
+<p>打开git bash（不要求在哪个目录）</p>
+<p>执行： “这里面是你的邮箱”</p>
+<p>不管出现什么信息，你只需要回车就可以了</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>ssh-keygen -t rsa -C “your_email<span class="hljs-variable">@youremail</span>.com“<br></code></pre></td></tr></table></figure>
+
+<p>然后执行</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade">$ cat ~<span class="hljs-regexp">/.ssh/i</span>d_rsa.pub<br></code></pre></td></tr></table></figure>
+
+<p>会输出你的秘钥，我们复制输出信息就行了</p>
+<p>然后点击头像，点击Settings–SSH·····–New SSH Key</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-53-12.bnffwtcf66a.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-53-12.bnffwtcf66a.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>粘贴你复制的秘钥</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-55-05.lakxr64606k.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_14-55-05.lakxr64606k.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后打开git bash</p>
+<p>执行：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span> ssh -T git<span class="hljs-variable">@github</span>.com<br></code></pre></td></tr></table></figure>
+
+<p>会提示你下面这个，输入yes回车就行了</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livescript">Are you sure you want <span class="hljs-keyword">to</span> <span class="hljs-keyword">continue</span> connecting (<span class="hljs-literal">yes</span><span class="hljs-regexp">/no/</span>[fingerprint])? <br></code></pre></td></tr></table></figure>
+
+<p>打开项目，点击绿色按钮，点击Use SSH</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-31.omf9nqgs46i.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-31.omf9nqgs46i.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>复制git开头的地址</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-38.kjtg51f14z.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-38.kjtg51f14z.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>打开站点配置文件</p>
+<p>修改deploy信息</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> 你复制的地址<br><span class="hljs-symbol">  branch:</span> master<br></code></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-58.3dtw3iersue.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-01-58.3dtw3iersue.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>在博客根目录下打开git bash</p>
+<p>分别执行下面的命令：</p>
+<p>yourname是你的名字</p>
+<p>youremail是你的邮箱</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs verilog">$ git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> <span class="hljs-string">&quot;yourname&quot;</span><br>$ git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;youremail&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>然后安装上传插件</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">cnpm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><blockquote>
+<p>以上的配置完成之后，就可以上传了</p>
+</blockquote>
+<p>在博客根目录下打开git bash，执行下面的命令就可以上传了</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g -d</span><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-49-05.lkmgvzcdzwh.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_12-49-05.lkmgvzcdzwh.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>然后打开项目，点击Settings</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-07-19.prpi9gjzgvn.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-07-19.prpi9gjzgvn.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>往下滑找到Github pages</p>
+<p>点击none 选择master branch</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-11-58.91hsb6n2sg.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-11-58.91hsb6n2sg.png" srcset="/img/loading.gif" alt="image"></a></p>
+<p>之后你会得到一个地址，这个就是你的网站地址了</p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-06-38.5i4rmc7ha2g.png"><img src="https://cdn.jsdelivr.net/gh/kjhuanhao/blogcdn/img/Snipaste_2020-02-29_15-06-38.5i4rmc7ha2g.png" srcset="/img/loading.gif" alt="image"></a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/12/ppython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="hidden-mobile">ppython数据分析</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
