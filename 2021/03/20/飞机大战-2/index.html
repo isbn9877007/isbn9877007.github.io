@@ -1,0 +1,540 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>飞机大战-2 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="飞机大战-2">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-20 09:55" pubdate>
+        March 20, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">飞机大战-2</h1>
+            
+            <div class="markdown-body">
+              <p>文章目录<br>（一）完成玩家飞机生成的编写—myplane 模块和mian模块的修改<br>1️⃣定义好一个玩家飞机类，类里编写move方法限制玩家飞机的移动范围<br>2️⃣在main模块中响应用户的键盘操作<br>3️⃣实现玩家飞机的动态效果<br>（二）完成敌机生成的编写—enemy模块和main模块的修改<br>1️⃣完成三种敌机类模块的编写<br>2️⃣在main模块中实例化敌机一）完成玩家飞机生成的编写—myplane 模块和mian模块的修改</p>
+<p>首先创建一个名为 myplane 的模块，然后把我方飞机的所有属性和方法定义在里边。</p>
+<h2 id="1️⃣定义好一个玩家飞机类，类里编写move方法限制玩家飞机的移动范围"><a href="#1️⃣定义好一个玩家飞机类，类里编写move方法限制玩家飞机的移动范围" class="headerlink" title="1️⃣定义好一个玩家飞机类，类里编写move方法限制玩家飞机的移动范围"></a>1️⃣定义好一个玩家飞机类，类里编写move方法限制玩家飞机的移动范围</h2><p>#myplane.py<br>import pygame</p>
+<p>class MyPlane(pygame.sprite.Sprite):<br>     def <strong>init</strong>(self,bg_size):<br>          pygame.sprite.Sprite.<strong>init</strong>(self)</p>
+<pre><code>      self.image = pygame.image.load(&quot;images/me1.png&quot;).convert_alpha()
+      self.rect = self.image.get_rect()
+      self.width,self.height = bg_size[0],bg_size[1]
+      self.rect.left,self.rect.top = \
+                               (self.width - self.rect.width )// 2,\
+                               self.height - self.rect.height - 60
+      self.speed = 10
+
+ #向上走
+ def moveUp(self):
+      if self.rect.top &gt; 0:
+           self.rect.top -= self.speed
+      else:
+           self.rect.top = 0
+           
+ #向下走
+ def moveDown(self):
+      if self.rect.bottom &lt; self.height - 60:
+           self.rect.top += self.speed
+      else:
+           self.rect.bottom = self.height - 60
+           
+ #向左走
+ def moveLeft(self):
+      if self.rect.left &gt; 0:
+           self.rect.left -= self.speed
+      else:
+           self.rect.left = 0
+
+ #向右走
+ def moveRight(self):
+      if self.rect.right &lt; self.width:
+           self.rect.right += self.speed
+      else:
+           self.rect.right = self.width
+</code></pre>
+<p>代码解析:首先来 class Myplane(pygame.sprite.Sprite): 定义玩家类，当然这个类要继承Sprite类，因为后面我们是需要对这个飞机进行碰撞检测的</p>
+<p>接着def init(self,bg_size): 这个在其他编程语言叫构造方法，就是用来初始化玩家飞机刚开始的状态的，那么它是需要一个bg_size参数的，就是背景的尺寸，也就是游戏窗口的尺寸，有这个尺寸，我们才能约束这个飞机不让他跑到游戏窗口外，限制在窗口内移动，接着Sprite也要来初始化一下</p>
+<p>接着 self.image = pygame.image.load(“images/me1.png”).convert_alpha() 就是把飞机的图片给加载进来，然后这里飞机的png背景需要透明的，所以convert_alpha() 来转化一下，接着就得到一个Surface对象了</p>
+<p>接着 self.rect = self.image.get_rect() 就是获取Surface对象的矩形对象咯，之前说过的，每一个Surface对象都会有一个rect矩形对象，是用来描述Surface对象的位置信息，而Surface对象其实就是图片，我们加载进来的图片。</p>
+<p>接着self.width,self.height = bg_size[0],bg_size[1] 就是把传进来的bg_size参数即背景图片的尺寸，把它给本地化，意思就是说把传进来的背景图片的宽和高分别给这里面width和height，这两个在其他编程语言就是表示这个类的一个属性，含义是指飞机可以移动的宽和高，因为只有本地化了，在其他方法里才可以直接用到这两个属性，比如下面的方法需要来判断是否大于这个width或者这个height啊，大于就表示超出了游戏窗口，width和height就是这么一个意思</p>
+<p>接着self.rect.left,self.rect.top = (self.width - self.rect.width )// 2,self.height - self.rect.height - 60 这里就是给玩家飞机初始化时出现在窗口的位置，那么我们知道，玩家飞机的位置在x轴上应该在中间位置，y轴上不能在最低下，下面要留下60像素的高度用于左部分显示全屏炸弹的剩余个数，右部分显示玩家还剩多少条生命，那么这里x轴就是游戏窗口的宽度减去这个飞机图像矩形对象的宽度再除以2，y轴就是用游戏窗口的高度减去矩形对象的高度再多减去60，然后把这两个值给，玩家飞机rect矩形对象的left，和top，其实这两个就是图片矩形对象左上角的坐标，因为知道了这个左上角的坐标，其余的pygame都会帮你计算好</p>
+<p>接着self.speed = 10 就是初始化玩家的速度，这个speed也就是这个飞机类的一个属性，然后玩家飞机需要有一个比较灵敏的速度，给10就好了，这样子玩家控制他，就会觉得老快的亚子了</p>
+<p>接下来就是分别来定义四个方法来描述这个飞机的上下左右移动</p>
+<p>首先就是def moveUp(self): 来个判断往上走的情况， if self.rect.top &gt; 0: 因为窗口左上角坐标是(0,0) ，如果矩形对象上部分不大于0，就是说没有超过游戏窗口的顶端位置，则self.rect.top -= self.speed 就是每次移动10个像素的位置，就是speed了，然后往上和往左走是减。往下和往右走是加</p>
+<p>接着另一种情况就是小于等于0了，要超出游戏窗口的上方了，那么就 self.rect.top = 0 纠正它的位置，使得玩家飞机的矩形对象最高只能跑到这个位置，同样的道理，下面是判断向下、向左、向右的情况，需要注意的地方就是if self.rect.bottom &lt; self.height - 60: 因为要留60像素的高度再下边。所以玩家飞机不可以最下边，这里的判断范围要注意一下，是self.height - 60 ，而不是self.height , 其他的都是照葫芦画瓢，认真敲代码就行了</p>
+<p>2️⃣在main模块中响应用户的键盘操作<br>首先响应用户键盘操作有两种方法，第一汇种我们常用的，当然也是我们最熟悉的，就是通过从pygame的事件队列中检测出事件消息，然后检测如果有KEYDOWN、KEYUP事件，那么我们就知道是玩家按下了键盘按键，这样才会产生KEYDOWN和KEYUP消息</p>
+<p>那么第二种就是调用key 模块里的 get_pressed() 方法，这个方法会返回一个序列，这个序列里边是包含你键盘上所有按键的一个布尔类型的值，如果这个值是True 的话，那表示该按键被按下，如果这个值是False的话，就表示该按键没有被按下。</p>
+<p>然后这里有个建议就是，对于检测偶然触发的键盘事件，那推荐使用第一种方法，比如说我们有个全屏炸弹的功能，是按下空格键，bong~一声爆炸，这个就是偶然触发的，没有经常触发，那就是用第一种方法，但是对于频繁触发的键盘事件，在建议使用第二种方法，因为这个游戏整个过程都是经过我们的键盘灵活的小手指控制键盘来移动这个飞机，所以这里应该是一个频繁的事件，那么我们就依然决然地使用第二种方法，接下来就去改下main函数<br>import pygame<br>import sys<br>import traceback<br>import myplane<br>from pygame.locals import *</p>
+<p>pygame.init()<br>pygame.mixer.init()</p>
+<p>bg_size = width,height = 480,700<br>screen = pygame.display.set_mode(bg_size)<br>pygame.display.set_caption(“飞机大战 – Monster ZF”)</p>
+<p>background = pygame.image.load(“images/background.png”).convert()</p>
+<h1 id="载入游戏音乐"><a href="#载入游戏音乐" class="headerlink" title="载入游戏音乐"></a>载入游戏音乐</h1><p>pygame.mixer.music.load(“sound/game_music.ogg”)<br>pygame.mixer.music.set_volume(0.2)<br>bullet_sound = pygame.mixer.Sound(“sound/bullet.wav”)<br>bullet_sound.set_volume(0.2)<br>bomb_sound = pygame.mixer.Sound(“sound/use_bomb.wav”)<br>bomb_sound.set_volume(0.2)<br>supply_sound = pygame.mixer.Sound(“sound/supply.wav”)<br>supply_sound.set_volume(0.2)<br>get_bomb_sound = pygame.mixer.Sound(“sound/get_bomb.wav”)<br>get_bomb_sound.set_volume(0.2)<br>get_bullet_sound = pygame.mixer.Sound(“sound/get_bullet.wav”)<br>get_bullet_sound.set_volume(0.2)<br>upgrade_sound = pygame.mixer.Sound(“sound/upgrade.wav”)<br>upgrade_sound.set_volume(0.2)<br>enemy3_fly_sound = pygame.mixer.Sound(“sound/enemy3_flying.wav”)<br>enemy3_fly_sound.set_volume(0.2)<br>enemy1_down_sound = pygame.mixer.Sound(“sound/enemy1_down.wav”)<br>enemy1_down_sound.set_volume(0.1)<br>enemy2_down_sound = pygame.mixer.Sound(“sound/enemy2_down.wav”)<br>enemy2_down_sound.set_volume(0.2)<br>enemy3_down_sound = pygame.mixer.Sound(“sound/enemy3_down.wav”)<br>enemy3_down_sound.set_volume(0.5)<br>me_down_sound = pygame.mixer.Sound(“sound/me_down.wav”)<br>me_down_sound.set_volume(0.2)</p>
+<p>def main():<br>    pygame.mixer.music.play(-1)</p>
+<pre><code>#生成玩家飞机
+me = myplane.MyPlane(bg_size)
+
+clock = pygame.time.Clock()
+
+running = True
+
+
+while running:
+    for event in pygame.event.get():
+        if event.type == QUIT:       
+            pygame.quit()
+            sys.exit()
+
+    #检测用户的键盘操作
+    key_pressed = pygame.key.get_pressed()
+
+    if key_pressed[K_w] or key_pressed[K_UP]:
+        me.moveUp()
+
+    if key_pressed[K_s] or key_pressed[K_DOWN]:
+        me.moveDown()
+        
+    if key_pressed[K_a] or key_pressed[K_LEFT]:
+        me.moveLeft()
+        
+    if key_pressed[K_d] or key_pressed[K_RIGHT]:
+        me.moveRight()
+
+
+    screen.blit(background,(0,0))
+    # 绘制玩家飞机
+    screen.blit(me.image,me.rect)
+
+    pygame.display.flip()
+    clock.tick(60)
+</code></pre>
+<p>if <strong>name</strong> == “<strong>main</strong>“:<br>    try:<br>        main()<br>    except SystemExit:<br>        pass<br>    except:<br>        traceback.print_exc()<br>        pygame.quit()<br>        input()</p>
+<p>代码解析:首先import myplane 把刚刚我们写好的玩家飞机的模块导入主模块，接着me = myplane.MyPlane(bg_size) 把bg_size给传进去，这样就就初始化好了玩家飞机me了</p>
+<p>接着key_pressed = pygame.key.get_pressed() 那么现在得到的key_pressed变量就是一个序列，序列里边包含整个键盘所有按键的一个布尔类型值。</p>
+<p>接着 if key_pressed[K_w] or key_pressed[K_UP] ，刚刚说了，现在key_pressed变量就是一个序列，而这里K_w 事实上就是一个索引值，他事实上都是定义的，他背后都有一个数字，那这里就是他的一个索引值，就是表示当W这个键被按下时，还有一个或者UP就是方向键的⬆️被按下时，那么就me.moveUp() 调用飞机往上移动的方法，下面的就是对向下、向左、向右的键盘按键检测，也是照葫芦画瓢，这里就不赘述了</p>
+<p>接着screen.blit(me.image,me.rect) 就是在绘制完背景后再来绘制出玩家的飞机</p>
+<p>运行结果如下：👇<br><img src="https://img-blog.csdnimg.cn/20200214220620636.gif" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/20/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98-3/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">飞机大战-3</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/20/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98-1/">
+                        <span class="hidden-mobile">飞机大战-1</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

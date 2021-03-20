@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>飞机大战-4 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="飞机大战-4">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-20 09:55" pubdate>
+        March 20, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      38
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">飞机大战-4</h1>
+            
+            <div class="markdown-body">
+              <p>文章目录<br>（一）完成 bullet 模块—玩家的普通子弹类的定义<br>（二）在main模块中初始化子弹类，并完成检测碰撞<br>1️⃣生成普通子弹<br>2️⃣发射子弹<br>3️⃣检测子弹是否击中敌机<br>（三）绘制中、大型敌机的血条<br>1️⃣给enemy模块的增添energy生命值属性<br>2️⃣修改mian模块，当敌机被击中，生命值减1<br>3️⃣修改mian模块，在中大型敌机上方添加血槽显示<br>4️⃣给中大型敌机加被射击时的特效图片<br>5️⃣下边附上这部分的完整源码<br>（一）完成 bullet 模块—玩家的普通子弹类的定义<br>上一章完成了完美检测碰撞的功能，这章来完成玩家的普通子弹，子弹有两种：一种是一次只发射一颗，一种是补给发放的超级子弹，一次可以射2颗子弹。子弹的运动轨迹是直线向上的，速度要略快于飞机的速度，子弹如果超出屏幕尽头的话，就是当子弹对象的rect矩形对象的top小于0的话，那么我们就重新绘制子弹，飞机在哪里，子弹就重新绘制在哪里，击中敌机的时候，子弹也是需要重新绘制的。</p>
+<p>那么子弹类和飞机类一样的，也需要一个active属性，通过该属性来判断该子弹是否需要重新绘制，子弹也单独定义为一个模块，下面开始走起</p>
+<h1 id="bullet-py"><a href="#bullet-py" class="headerlink" title="bullet.py"></a>bullet.py</h1><p>import pygame</p>
+<p>#普通子弹<br>class Bullet1(pygame.sprite.Sprite):<br>     def <strong>init</strong>(self,position):<br>          pygame.sprite.Sprite.<strong>init</strong>(self)<br>          self.image = pygame.image.load(“images/bullet1.png”).convert_alpha()<br>          self.rect = self.image.get_rect()<br>          self.rect.left,self.rect.top = position<br>          self.speed = 12<br>          self.active = True<br>          self.mask = pygame.mask.from_surface(self.image)</p>
+<pre><code> def move(self):
+      self.rect.top -= self.speed
+
+      if self.rect.top &lt; 0:
+           self.active = False
+
+ def reset(self,position):
+      self.rect.left,self.rect.top = position
+      self.active = True
+</code></pre>
+<p>代码解析：同样的先把pygame模考导入接着class Bullet1(pygame.sprite.Sprite): 首先来定义个普通子弹的类，后面还会两个子弹的情况，这个类同样要继承Sprite这个类，待会要做碰撞检测。</p>
+<p>接着 def init(self,position): 来初始化子弹的状态了，那么如先来初始化pygame模块里Sprite类的init方法，这个init方法相当于其他编程语言的构造方法，self相当于this指针。</p>
+<p>接着self.image = pygame.image.load(“”images/bullet1.png).convert_alpha() 来加载子弹的图片，同样通过带alpha通道的来转换，执行后就得到了一个子弹图片的Surface对象了</p>
+<p>接着self.rect = self.image.get_rect() 就是获取子弹图片Surface对象的rect对象，描述图片位置信息用的。</p>
+<p>接着 self.rect.left,self.rect.top = position 初始化子弹的位置，那就是等于传进来的positon，那待会实例化这个子弹类时传进来的position就应该是飞机矩形对象的中央上方发射</p>
+<p>接着self.speed = 12 设置飞机速度为12，略大于飞机的速度，接着self.active = True 给子弹设置active的属性，默认为True，待会根据这个属性来判断是否重绘制子弹</p>
+<p>接着self.mask = pygame.mask.from_surface(self.image) 因为待会要进行一个判断，要判断这个子弹跟敌机是否发生碰撞，然后要进行一个完美检测，所以需要一个mask属性，上一章也讲过了，那么就是调用mask模块里边的from_surface方法，将传进来的surface对象的非透明部分做以下标志，做一下mark，然后返回给mask属性，后边调用collide_mask方法，他就会自动对比两个精灵的mask部分是否发生碰撞，而不是整个矩形部分</p>
+<p>接着def move(self): 就是来定义子弹的移动的方法，子弹的移动非常简单，就修改子弹矩形对象的top坐标就可以了，因为子弹是一直往上走的所以self.rect.top -= self.speed ，那么 if self.rect.top &lt; 0: 如果说子弹的位置小于0的话，就说明跑到屏幕上方看不见的位置了，那么self.active = False 把它的active属性设置为False，说明他需要重新绘制</p>
+<p>接着def reset(self,position): 就是当子弹的active属性为False的时候，来调用这个reset()方法，相当于在一次初始化，self.rect.left,self.rect.top = position 然后self.active = True 把它的active属性再次设置为True。</p>
+<p>（二）在main模块中初始化子弹类，并完成检测碰撞<br>1️⃣生成普通子弹<br><img src="https://img-blog.csdnimg.cn/20200216111335738.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>代码解析：那么首先import bullet 把刚刚写好的模块导入进来，接着就是在生成飞机之后就来生成子弹，那么bullet1 = [] 先来一个列表用于把生成的子弹都放到这个bullet1列表里边去</p>
+<p>然后从上节课生成飞机的经验我们可以知道，一个一个生成我们需要从这个bullet1列表里边里边索引，所以我们先bullet1_index = 0给他一个用来索引列表的变量</p>
+<p>接着BULLET1_NUM = 4 来个宏定义，定义总共有4颗子弹，因为我们发现只用4颗子弹在加上他这个速度刚好就完成了屏幕大约80%的射程</p>
+<p>接着for i in range(BULEET1_NUM): 就是依次生成子弹，实例化子弹对象，bullet1.append(me.rect.midtop)) 把实例化后的子弹都添加到bullet1 = [] 列表 ，那么实例化他需要一个position变量，那么子弹生成的位置应该是飞机顶部中央，me 就是玩家的实例化对象，这个rect矩形类他有定于很多个索引的方式，这里midtop 就是表示顶部中央的意思，比如之前还有center_x，center_y 分别x正中央的坐标，y正中央的坐标</p>
+<p>2️⃣发射子弹<br><img src="https://img-blog.csdnimg.cn/20200216103327667.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>接下来就来设置每十帧就发射一颗子弹，你不能同时发，同时发射先只显示为一颗子弹了，他就是重叠起来了，那么我们就在绘制敌机之前来把子弹绘制出来，然后后边在检测会不会撞到敌机。</p>
+<p>那么就是if not(delay % 10): 每十帧，就调用一次，这里意思就是说只又delay 的值是能够被10整除的，那么才会执行这里边的内容，那么就是每一次while循环，这个delay就减1，前边为了延迟玩家飞机图片切换，突突突效果更明显已经用过了延迟的小技巧，已经把delay设置为100了，每次减1，减到0又试设置为100。那么一次while循环就是一帧嘛。</p>
+<p>接着就是bullet1[bullet1_index].reset(me.rect.midtop) 这里就用到了刚刚的索引变量了，一个个子弹从bullet列表中索引出来生成出来，然后子弹是要随着玩家的操作不断地移动的，所以呢，每次reset就把玩家当前这个时候的位置，给他传进去，传给这个position，然后reset之后，他就会设置这个子弹的位置位于这个飞机顶端的中央。接着bullet1_index =(bullet1_index + 1) % BULLET1_NUM 需要把bullet1_index指向下一个索引，比如说现在是1，那么就指向2,2的话就变成3，那最多不能超过4，所以 % BULLET1_NUM 就可以完成了</p>
+<p>3️⃣检测子弹是否击中敌机<br><img src="https://img-blog.csdnimg.cn/20200216111437519.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>接下来我们还需要检测每个子发射出去的子弹会不会击中敌机，如果击中敌机的话，敌机的active属性就要设置为False，子弹的active属性也是设置为False</p>
+<p>那么for b in bullet1: 就从装了子弹实例化对象的列表中迭代遍历来索引，然后if b.active: 只有活动的子弹才可能去击中敌机，active为False 的实例化对象就忽略，接着b.move() 让子弹开始飞，然后screen.blit(b.image,b.rect) 把子弹画出来</p>
+<p>接着enemy_hit = pygame.sprite.spritecollide(b,enemies,False,pygame.sprite.collide_mask) 就是来看看当前这个子弹b是否跟存了所有敌机的列表的任何敌机发生碰撞，这个列表前边生成敌机的时候已经定义好了，而且是存放了大中小型的都有，第三个参数False就表示不用把跟b发生碰撞的敌机从enemies列表中删除，最后一个参数就是指定了是检测mask部分是否发生碰撞，即完美的碰撞检测</p>
+<p>接着if enemy_hit: 刚刚那个方法会把和b碰撞的敌机以列表的形式返回，这里就来判断里边是否有敌机，有就b.active = False ，首先打中了，我这个子弹就没了，接着 for e in enemy_hit: 遍历这个列表，把这个列表的所有敌机的active属性设置为False</p>
+<p>测试结果：👇</p>
+<p><img src="https://img-blog.csdnimg.cn/2020021611261647.gif" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>三）绘制中、大型敌机的血条<br>那么先在的情况是，对于中型和大型敌机，我们一颗子弹就可以把他们秒杀了，那就显得敌机也太脆弱了，所以接下来先给他们添加一个energy的属性，这个属性就是显示他们还有多少生命值，俗话讲就是还有多少血，就是打一下减一滴血，打两下减两滴血，如果有8滴血就可以打8下，打完8滴血他才会死</p>
+<p>1️⃣给enemy模块的增添energy生命值属性<br>enemy.py 👇<br><img src="https://img-blog.csdnimg.cn/2020021612101196.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200216121751220.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200216122042421.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>代码解析：这里是需要定义成类的属性，因为等等要在外面用到它，在mian里边也会用到，所以定义为类的全局变量，那么这里就是中型飞机要打8下才会毁灭，接着self.energy = MidEnemy.energy 在__init__里边给self.energy赋值，然后是要用类的形式来引用，然后reset方法里边也同样来重新给他加上生命值<br><img src="https://img-blog.csdnimg.cn/20200216122225938.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>接着大型敌机生命值给20，下面同样也要来赋值，reset方法也要来修改，这里就不赘述了。</p>
+<p>2️⃣修改mian模块，当敌机被击中，生命值减1<br>那么就是每当中、大型敌机被子弹击中的时候，我们先将他们对应的energy属性的值减一，一直减，减到energy的值为0的时候，我们才让敌机给毁灭<br><img src="https://img-blog.csdnimg.cn/20200216123816426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>那么就是在敌机被击中时，就来f e in mid_enemies or big_enemies: 来判断是否是中大型敌机，是的话就e.energy -= 1 减1生命值，然后if e.energy == 0 来判断他们的生命值是否等于0，是的话e.active = False 就把他们的active属性设置为False，另一种情况就是小型敌机了，直接设置他的active属性为False就可以了</p>
+<p>关于上面的mid_enemies 和 big_enemies 这两个列表，因为前面在创建敌机的时候，他都会把新创建的敌机加入到两个group中，一个是加入到他自己的group，就是这个mid_enemies ，另一个就是加入一个存着所有敌机的enemies列表</p>
+<p>3️⃣修改mian模块，在中大型敌机上方添加血槽显示<br>接下来我们可以为中大型敌机添加一个血槽的显示功能，这样我们可以更直观的让玩家知道敌机还剩多少生命。</p>
+<p>那我们就在绘制中大型敌机这里需要进行一个修改，就是在绘制完敌机的时候，我们就来绘制一下他的血槽，那其实血槽就是一条直线，那么我们可以先绘制一条黑色的直线，然后在上面绘制一条绿色的直线，黑色的长度是总共血槽的长度，而绿色的长度表示当前他剩下的energy生命值<br><img src="https://img-blog.csdnimg.cn/20200216125241847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020021613052059.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>那么就先去上面定义一下需要用到的各种颜色，接着pygame.draw.line(screen,BLACK, (each.rect.left,each.rect.top - 5), (each.rect.right,each.rect.top - 5),2) 调用pygame的draw模块的line，画直线的方法，第一个参数就是指定画在screen 对象上，第二个参数就指定画的颜色，第三个参数就是画的直线的开始位置，那么就是这个飞机矩形对象左上角往上大概5个像素的距离，第四个参数就是画的直线的结束位置，就是飞机矩形对象右上角往上大概5个像素的点 ，连起来就是一条直线啦，然后第五个参数再来设置一下直线的宽度为2<br><img src="https://img-blog.csdnimg.cn/20200216132751493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>那么接着energy_remain = each.energy / enemy.BigEnemy.energy 先来计算还剩多少生命值 的比例，就是当前的生命值除以 enemy模块的BigEnemy类的类变量energy，然后if energy_remain &gt; 0.2: 来判断，如果大于20%就显示绿色，否则显示红色</p>
+<p>接着pygame.draw.line(screen,energy_color, (each.rect.left,each.rect.top - 5), (each.rect.left + each.rect.width *energy_remain, each.rect.top - 5),2) 首先第三个参数是一样的，起点都是一样，然后血条的右边的终点我们就要算算比例了，那就是起点开始each.rect.left ，然后再加上还有多少血，each.rect.width *energy_remain，因为each.rect.width 飞机矩形的宽度刚好就是整个血条的长度，拿来乘上边计算得到还剩的比例，就可以得到绿色或者红色还要话多长了， 然后这只是x坐标的，还有y坐标的each.rect.top - 5，不变，还剩飞机矩形往上5个像素，宽度也还是2个像素<br><img src="https://img-blog.csdnimg.cn/20200216133118815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3cxNTk3Nzg1ODQwOA==,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>那么接着中型飞机的也是类似的，记得把相应变量名改正就会了，这里就不赘述了</p>
+<p><strong>测试结果：</strong>👇</p>
+<p><img src="https://img-blog.csdnimg.cn/20200216134810585.gif" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/20/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98-5/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">飞机大战-5</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/20/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98-3/">
+                        <span class="hidden-mobile">飞机大战-3</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
