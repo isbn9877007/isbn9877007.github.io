@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Python学习 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Python学习">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-20 09:30" pubdate>
+        March 20, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      7.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      97
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python学习</h1>
+            
+            <div class="markdown-body">
+              <p><img src="https://pic4.zhimg.com/v2-a81dd79a87d41a84d3ebfceeedb24901_1440w.jpg?source=172ae18b" srcset="/img/loading.gif" alt="python基础语法学习——参考Python Crash Course"></p>
+<h1 id="python基础语法学习——参考Python-Crash-Course"><a href="#python基础语法学习——参考Python-Crash-Course" class="headerlink" title="python基础语法学习——参考Python Crash Course"></a>python基础语法学习——参考Python Crash Course</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/qing-shan-fu-yi"><img src="https://pic4.zhimg.com/v2-c04773b305197a280743177ffac52596_xs.jpg?source=172ae18b" srcset="/img/loading.gif" alt="小刘长点薪"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/qing-shan-fu-yi">小刘长点薪</a></p>
+<p>用我的眼，看来往的路，看变化万端的自己.</p>
+<p>关注他</p>
+<p>4 人赞同了该文章</p>
+<p>第一章：python在各个系统之间的安装和使用（略）</p>
+<p>第二章：</p>
+<p>变量</p>
+<p>2.1.每个变量都存储了一个值 ——与变量相关联的信息.在程序中可随时修改变量的值，而 Python将始终记录变量的最新值。</p>
+<p>2.2变量名只能包含字母、数字和下划线<strong>，不能有空格</strong>。变量名可以字母或下划线打头，<strong>但不能以数字打头。</strong></p>
+<p>小练习：将一条消息存储到变量中，再将其打印出来。#print只能打印变量和字符串，不能打数字和字母！</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">Liuyuanji=&quot;He is so handsome!&quot;<br>print(Liuyuanji)<br></code></pre></td></tr></table></figure>
+
+<p>字符串</p>
+<p>2.3字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号，也可以是双引号.没什么区别. 单独的字符串需要有引号来引用，数字就不用了。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&quot;He said&#x27;i don&#x27;t like you.&#x27;&quot;<br></code></pre></td></tr></table></figure>
+
+<p>2.3.1将字符串进行大小写的改变——X.title（）title() 以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">AK=&quot;taylor swift&quot;<br>print(AK.title())<br></code></pre></td></tr></table></figure>
+
+<p>2.3.2 将字母全部变成大写——x.upper（）；将字母全部变成小写x.lower（）</p>
+<p>2.3.3合并（拼接）字符串，在python中使用“+”号来连接字符串.</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">A=&quot;John&quot;<br>B=&quot;NYU&quot;<br>C=A+&quot; &quot;+B<br>print(C)<br></code></pre></td></tr></table></figure>
+
+<p>可以再来一句话给出一个例子来试验。这里需要注意的地方（我自己写出错的地方）：在print语句中，如果是单纯的字符（字母和符号），是需要用引号隔开的，如果是字符串就不用啦）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">A=&quot;John,I love you baby!&quot;<br>print(&quot;Hello,I wanna tell you:&quot;+A)<br></code></pre></td></tr></table></figure>
+
+<p>2.3.4使用制表符或换行符来添加空白:</p>
+<p>可使用字符组合 \t来添加制表符（多一个tap）；可以使用\n来添加换行符。害，我刚才又出现了一个错误：<strong>制表符是要放在字符前面的！然后最后一行不要换行了…….</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">print（&quot;\tHello,John!&quot;）<br>print(&quot;name:\nage:\ngender:&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>ps：还可在同一个字符串中同时包含制表符和换行符。字符串 “\n\t” 让 Python 换到下一行，并在下一行开头添加一个制表符。</p>
+<p>2.3.5删除空白：</p>
+<p>\1. Python 能够找出字符串开头和末尾多余的空白。要确保字符串末尾没有空白，可使用方法 .rstrip() 这里的删除只是暂时的，<strong>也可以理解为把删除空白格的变量成了一个新的变量。</strong>要永久删除这个字符串中的空白，必须将删除操作的结果存回到变量中。</p>
+<p>2.同理：还可以剔除字符串开头的空白，或同时剔除字符串两端的空白。为此，可分别使用方法 lstrip() 和 strip() ：（具体不写example了）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">A=&quot;NYU     &quot;<br>B=A.rstrip()<br>print(B)<br>A=B<br>print（A）<br></code></pre></td></tr></table></figure>
+
+<p>2.4 数字</p>
+<p>2.4.1 整数运算（略）:加（ + ）减（ - ）乘（ * ）除（ / ）；Python 使用两个乘号表示乘方运算</p>
+<p>2.4.2浮点数（小数）（略）</p>
+<p>2.4.3关于将非字符数变成字符数：str（x） 我的错误我以为是x.str（）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">age=20<br>print(&quot;John is &quot;+str(age)+&quot; old&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>2.5注释（一个很有用的技能）</p>
+<p>在 Python 中，注释用井号（ # ）标识。井号后面的内容都会被 Python 解释器忽略。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">print(&quot;I LOVE TAYLOR SWIFT!&quot;)#DBDFHOIHDOICIOSAFOIIFCEO<br></code></pre></td></tr></table></figure>
+
+<p>在本章中，学习了：如何使用变量；如何创建描述性变量名以及如何消除名称错误和语法错误；字符串是什么，以及如何使用小写、大写和首字母大写方式显示字符串；使用</p>
+<p>空白来显示整洁的输出，以及如何剔除字符串中多余的空白；如何使用整数和浮点数；使用数值数据时需要注意的意外行为。你还学习了如何编写说明性注释，让代码对你和其</p>
+<p>他人来说更容易理解。最后，你了解了让代码尽可能简单的理念。</p>
+<p>第三章：列表简介</p>
+<p>在 Python 中，用方括号（ [] ）来表示列表：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">My Favorite singer=([Taylor Swift],[justin bieber])#这是我第一次的错误<br>MY Favorite singer=[&quot;Taylor Swift&quot;,&quot;Justin Bieber&quot;]#这个就是第二次正确的一个列表<br></code></pre></td></tr></table></figure>
+
+<p>3.1.1访问列表元素，只需将该元素的位置或索引告诉 Python 即可。（索引位置是从0开始而不是1,算是常识）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">MY Favorite singer=[&quot;Taylor Swift&quot;,&quot;Justin Bieber&quot;]<br>print（MY Favorite singer[1])#这样给出的就是Justin Bieber了<br></code></pre></td></tr></table></figure>
+
+<p>3.1.2使用列表中的各个值。这个其实和一开始用非字符串当做字符串是一样的。我觉得如果列表中的元素不是字符串的话，可能还需要用一个str（）吧。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br> message = &quot;My first bicycle was a &quot; + bicycles[0].title() + &quot;.&quot;<br></code></pre></td></tr></table></figure>
+
+<p>3.2 　修改、添加和删除元素</p>
+<p>3.2.1 　修改列表元素： 修改列表元素的语法与访问列表元素的语法类似。要修改列表元素，可指定列表名和要修改的元素的索引，再指定该元素的新值。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br>bocycles[2]=&quot;red&quot;<br>print(bicycles)<br></code></pre></td></tr></table></figure>
+
+<p>3.2.2 增加列表元素：X.append（）将一个新的元素加入到列表的末尾。（注意，不是加新的列表，而是列表元素哦，我一开始学的时候列表个数和列表元素老是分不清）</p>
+<p>ps:小技巧：可首先创建一个空列表，用于存储用户将要输入的值，然后将</p>
+<p>用户提供的每个新值附加到列表中。</p>
+<p>3.2.3在列表中插入元素，如果要插入的话，确定两个变量就好咯——索引，和元素内容。</p>
+<p>用X.insert（a,b）——a为列表中的索引，b为元素内容：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br>bicycles.insert(3,&#x27;good&#x27;)<br>print(bicycles)<br></code></pre></td></tr></table></figure>
+
+<p>3.2.4从列表中删除元素</p>
+<p>如果知道要删除的元素在列表中的位置，可使用 del <strong>语句</strong>。注意，是语句。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br>del bicycles[1]#语句不需要加括号吧<br>print(bicycles)<br></code></pre></td></tr></table></figure>
+
+<p>使用方法 pop() 删除元素。pop（）可以删除列表中的最后一个元素.如果需要使用删去的那个元素，创建一个新的变量保存吧。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br>Ok=bicycles.pop()#Ok就是代表了最后一个元素了<br>print(bicycles)#这个时候就会给出失去最后一个元素的原本列表bicycles了<br></code></pre></td></tr></table></figure>
+
+<p>3.2.5从列表中弹出任何位置的元素。用pop（x），其中x就是代表元素在列表中的索引位置。如果想使用：先用pop（）删去，然后用新的变量表示删去的，再引用新的变量，就开业弹出了。 ps:如果用del语句删除就无法再引用了，如果用pop（）就还可以。（例子也可以用上面的）</p>
+<p>3.2.6根据值删除元素 remove(x)具体的比pop（x）差不多吧我感觉。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">bicycles = [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]<br>apple=bicycles.remove（&quot;redline&quot;）<br>print(bicycles)<br></code></pre></td></tr></table></figure>
+
+<p>3.3组织列表</p>
+<p>3.3.1　使用方法 sort() 对列表进行<strong>永久性</strong>排序（按字母顺序排序);你还可以按与字母顺序相反的顺序排列列表元素，为此，只需向 sort() 方法传递参数 reverse=True 。这里的永久性我的理解就是电脑删去了原本的样子没有copy了。彻底改变回不去。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">cars = [&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]<br>cars.sort()<br>print(cars)<br>cars.sort(reverse=True)#为什么是这样的形式呢？<br>print（cars）<br></code></pre></td></tr></table></figure>
+
+<p>3.3.2使用函数 sorted() 对列表进行临时（按字母顺序）排序。这样的话就相当于出现了新的排序，但是原本的也有备份吧。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">cars = [&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]<br>cars.sorted()<br>print(cars)<br></code></pre></td></tr></table></figure>
+
+<p>3.3.3倒着打印列表 reverse().将列表的元素顺序颠倒显示。reverse的修改也是永久性的，无备份。</p>
+<p>3.3.4确定列表长度——len（）ps：列表长度从1开始</p>
+<p>关于索引的顺序：从左往右从0开始，从右往左从-1开始。</p>
+<p>在本章中，学习了：<strong>列表是什么以及如何使用其中的元素；如何定义列表以及如何增删元素；如何对列表进行永久性排序，以及如何为展示列表而进行临时排序；如何确定列表的长度，以及在使用列表时如何避免索引错误。</strong></p>
+<p>第 4 章　操作列表</p>
+<p>4.1 　遍历整个列表——用for循环就可 （for X in Y：）</p>
+<p>4.1.2 　在 for 循环中执行更多的操作，其实也就多了之前的结合。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">magicians = [&#x27;alice&#x27;, &#x27;david&#x27;, &#x27;carolina&#x27;]<br>for x in magicians：<br>    print（x.title（）+“is a good person！”）<br></code></pre></td></tr></table></figure>
+
+<p>在 for 循环后面，没有缩进的代码都只执行一次，而不会重复执行。<strong>缩进不缩进，关乎着逻辑的问题。</strong>只有要在 for 循环中对每个元素执行的代码需要缩进（目前）。还有一个！！！千万别忘记了冒号。</p>
+<p>4.2 　创建数值列表</p>
+<p>4.2.1　使用函数 range()</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">for X in range(a,b）:<br>    print(x)#给出来的结果应该是a到b-1<br>for X in range（a，b，3）<br>    print(x)#这里range多了一个步长，算是数列中的差吧 不写默认为1<br></code></pre></td></tr></table></figure>
+
+<p>4.2.2 　使用 range() 创建数字列表：用list（），将range（）变成list（）中的参数。</p>
+<p>4.2.3 max(); min();sum()</p>
+<p>4.2.4.列表解析 用一行代码来实现循环</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">squares = [value**2 for value in range(1,11)]<br>print(squares)<br></code></pre></td></tr></table></figure>
+
+<p>就个人感觉，如有小misson：一般先创建一个空列表，然后for循环填进去，然后在用for print或者sum 都行。</p>
+<p>4.3关于切片。与函数 range() 很相似吧， Python 在到达你指定的第二个索引前面的元素后停止。关于那种负数索引和正数索引用法和range（）一样。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">players = [&#x27;charles&#x27;, &#x27;martina&#x27;, &#x27;michael&#x27;, &#x27;florence&#x27;, &#x27;eli&#x27;]<br>   print(players[0:3])#零对应第一个，一直切到3之前的元素，也就是2<br>   print(players[:3])#没有首个元素的索引，默认从第一个开始<br>   print(players[2:])#没有尾部元素的索引，默认一直开始到最后一个<br></code></pre></td></tr></table></figure>
+
+<p>4.3.2 　遍历切片——用for循环进行列表切片索引就好</p>
+<p>4.4.3 　复制列表，可创建一个包含整个列表的切片，方法是同时省略起始索引和终止索引（ [:] ）</p>
+<p>4.4. 4　元组—— Python 将不能修改的值称为 不可变的 ，而不可变的列表被称为元组 。元组是圆括号，列表是方括号。虽然不能修改元组的元素，但可以给存储元组的变量赋值。因此，如果要修改前述矩形的尺寸，可重新定义整个元组。（类似于重新写一个吧）</p>
+<p>在本章中，学习了：<strong>如何高效地处理列表中的元素；如何使用for 循环遍历列表，Python如何根据缩进来确定程序的结构以及如何避免一些常见的缩进错误；如何创建简单的数字列表，以及可对数字列表执行的一些操作；如何通过切片来使用列表的一部分和复制列表。你还学习了元组（它对不应变化的值提供了一定程度的保护）。</strong></p>
+<p>第五章 if语句</p>
+<p><strong>5.2</strong> 条件测试</p>
+<p>每条if 语句的核心都是<strong>一个值为True 或False 的表达式</strong>，这种表达式被称为条件测试 。</p>
+<p>=：赋值；==等于；！=不等于</p>
+<p><strong>5.2.1多个条件测试（同时满足），可以用 and （类似与门）；多个条件测试（满足一个就可），可以用or（类似或门）</strong></p>
+<p><strong>5.2.2</strong>判断特定的值是否已包含在列表中，可使用关键字in;确定特定的值未包含在列表中很重要；在这种情况下，可使用关键字not in</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">Caffe=[&quot;ad&quot;,&quot;va&quot;]<br> &quot;ad&quot; in Caffe:<br><br>banned_users = [&#x27;andrew&#x27;, &#x27;carolina&#x27;, &#x27;david&#x27;] <br>user = &#x27;marie&#x27; <br>if user not in banned_users: <br>    print(user.title() + &quot;, you can post a response if you wish.&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>5.3 if 语句学习</p>
+<p>在if 语句中，缩进的作用与for 循环中相同。如果测试通过了，<strong>将执行if 语句后面所有缩进的代码行</strong>，否则将忽略它们。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">John= &quot;handsome&quot;<br>if John=&quot;handsome&#x27;:<br>   print(&quot;He is so good! i wanna him&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>5.3.2 if-else 语句，常常用于二选一的状态：通常else之后直接就是一个冒号就好了，因为只要不满足if，就是else。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">if xxxxx：<br> xxxxxxxxxx<br>else：<br>xxxxxxx<br></code></pre></td></tr></table></figure>
+
+<p><strong>5.3.3 if-elif-else</strong> 结构：也就多了一个选择吧，多个elif</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">ifxxxxx：<br>  xxxxxxx<br>elif xxxxx：<br>  xxxxxxxx<br>else：<br>  xxxxx<br></code></pre></td></tr></table></figure>
+
+<p>5.3.4 多个elif结构。有时候可以不用else了，<strong>可以用一个具体的elif来代替else，会使得代码更加清晰</strong>。else 是一条包罗万象的语句，只要不满足任何if 或elif 中的条件测试，其中的代码就会执行，这可能会引入无效甚至恶意的数据。</p>
+<p>上面的几个条件结构都是针对只需要满足其中一种的情况，如果需要多个条件<strong>独立</strong>检验（和有and or 的不一样的），则我们需要多个if语句来分开来独立检验。</p>
+<p>5.3.5 用if语句使用多个列表：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">available_toppings = [&#x27;mushrooms&#x27;, &#x27;olives&#x27;, &#x27;green peppers&#x27;, &#x27;pepperoni&#x27;, &#x27;pineapple&#x27;, &#x27;extra cheese&#x27;] <br>requested_toppings = [&#x27;mushrooms&#x27;, &#x27;french fries&#x27;, &#x27;extra cheese&#x27;] <br>for requested_topping in requested_toppings:<br>      if requested_topping in available_toppings: <br>           print(&quot;Adding &quot; + requested_topping + &quot;.&quot;) <br>      else:<br>           print(&quot;Sorry, we don&#x27;t have &quot; + requested_topping + &quot;.&quot;) <br>print(&quot;\nFinished making your pizza!&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>在本章中，学习了<strong>如何编写结果要么为Ture 要么为False 的条件测试。你学习了如何编写简单的if 语句、if-else 语句和if-elif-else 结构。在程序中，你使用了这些结构来测试特定的条件，以确定这些条件是否满足。学习了如何在利用高效的for 循环的同时，以不同于其他元素的方式对特定的列表元素进行处理。</strong></p>
+<p><strong>第六章 字典</strong></p>
+<p>在 Python 中， 字典 是一系列 键 — 值对 。每个 键 都与一个值相关联，你可以使用键来访问与之相关联的值（print（键），然后输出值）。<strong>字典用放在花括号 {} 中的一系列键 — 值对表示</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">cool=&#123;&quot;John&quot;:&quot;handsome&quot;,&quot;jack&quot;:&quot;ugly&quot;&#125;#字典中间需要用逗号隔开<br></code></pre></td></tr></table></figure>
+
+<p>6.2.2 添加键值对，很简单就是一行代码：X[添加的键]=添加的值。（x为已知的字典）；一般也可以先添加一个空的字典，然后一点点的往里面填键值对。</p>
+<p>6.2.3修改键值对——要修改字典中的值，可依次指定字典名、用方括号括起的键以及与该键相关联的新值。其实和添加差不多。只是键名不是新的，而是已经存在的。</p>
+<p>6.2.4对于字典中不再需要的信息，可使用 del 语句将相应的键 — 值对彻底删除。</p>
+<p>del X[键名]</p>
+<p>6.2.5 X.items() 可以返回一个对应的键和值：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">message=&#123;&quot;Name&quot;:&quot;John&quot;,&quot;Age&quot;:20,&quot;Gender&quot;:&quot;male&quot;&#125;<br>for key,value in message.items():#一定要有2个变量，分别对应键，值<br>    print(\n&quot;Key is:&quot;+key)<br>    print(&quot;Value is:&quot;+value)#跑数字的时候还需要用str单独搞一下。可以考虑使用if elif结构<br>     <br></code></pre></td></tr></table></figure>
+
+<p>6.2.6遍历字典中的所有键 for循环+keys()方法 keys() 并非只能用于遍历；实际上，它返回一个<strong>列表</strong>，其中包含字典中的所有键。</p>
+<p>6.3 按顺序遍历字典的所有键：还是for循环+sorted()顺序功能。</p>
+<p>ps：是要获取所有字典的值的话：for循环+values（）即可。如果值出现了重复，使用set（）即可。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">favorite_languages = &#123;<br>&#x27;jen&#x27;: &#x27;python&#x27;,<br>&#x27;sarah&#x27;: &#x27;c&#x27;,<br>&#x27;edward&#x27;: &#x27;ruby&#x27;,<br>&#x27;phil&#x27;: &#x27;python&#x27;,<br>&#125;<br>print(&quot;The following languages have been mentioned:&quot;)<br>for language in set(favorite_languages.values()):<br>    print(language.title())<br></code></pre></td></tr></table></figure>
+
+<p>6.4嵌套</p>
+<p>系列字典存储在列表中，或将列表作为值存储在字典中，这称为 嵌套。（类似于换元吧）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs text">alien_0 = &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;<br>alien_1 = &#123;&#x27;color&#x27;: &#x27;yellow&#x27;, &#x27;points&#x27;: 10&#125;<br>alien_2 = &#123;&#x27;color&#x27;: &#x27;red&#x27;, &#x27;points&#x27;: 15&#125;<br>aliens = [alien_0, alien_1, alien_2]#这个就嵌套<br>for alien in aliens:<br>print(alien）<br><br><br><br><br>pizza = &#123;<br>&#x27;crust&#x27;: &#x27;thick&#x27;,<br>&#x27;toppings&#x27;: [&#x27;mushrooms&#x27;, &#x27;extra cheese&#x27;],<br>&#125;#这个也是嵌套<br> print(&quot;You ordered a &quot; + pizza[&#x27;crust&#x27;] + &quot;-crust pizza &quot; +<br>&quot;with the following toppings:&quot;)<br> for topping in pizza[&#x27;toppings&#x27;]:<br>print(&quot;\t&quot; + topping)<br></code></pre></td></tr></table></figure>
+
+<p>学习了：<strong>如何定义字典，以及如何使用存储在字典中的信息；如何访问和修改字典中的元素，以及如何遍历字典中的所有信息；如何遍历字典中所有的键 - 值对、所有的键和所有的值；如何在列表中嵌套字典、在字典中嵌套列表以及在字典中嵌套字典。</strong></p>
+<p><strong>第 7 章　用户输入和 while 循环</strong></p>
+<p><strong>7.1</strong> 　函数 input()—-函数 input() 让程序暂停运行，等待用户输入一些文本。获取用户输入后， Python 将其存储在一个变量中。</p>
+<p>7.1.2 　使用 int() 来获取数值输入。int（x）x原本代表的是数字字符串，用了之后就转变成了数字类型了（不是字符串）。</p>
+<p>7.1.3求模运算符 %(用来判断奇数偶数）</p>
+<p>7.2while 循环。</p>
+<p>就是给了一个条件（范围），让东西停止吧。主要因为那个范围不是给定的（就像那种完整的列表之类，可以用for来搞定）。一直运行到while后面的条件不满足为止。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">prompt = &quot;\nTell me something, and I will repeat it back to you:&quot;<br>prompt += &quot;\nEnter &#x27;quit&#x27; to end the program. &quot;<br>message = &quot;&quot;<br>while message != &#x27;quit&#x27;:<br>    message = input(prompt)<br>    print(message)<br></code></pre></td></tr></table></figure>
+
+<p>7.2.3使用标志 while X： x只需要等于true 作为是否进行的一个标志即可。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">john=&quot;Tell me love me ,baby!&quot;<br>john+=&quot;\nif you do,let us make love.&quot;<br>active=True<br>while active:<br>      if message==&quot; No!&quot;:<br>          active=False<br>      else:<br>           print(message)## False &amp;True 要大写！<br></code></pre></td></tr></table></figure>
+
+<p>7.2.4 　使用 break 退出循环，有时候不方面确定明确的停止条件，就需要用break了。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">prompt = &quot;\nPlease enter the name of a city you have visited:&quot;<br>prompt += &quot;\n(Enter &#x27;quit&#x27; when you are finished.) &quot;<br>while True:<br>    city = input(prompt)<br>if city == &#x27;quit&#x27;:<br>    break<br>else:<br>    print(&quot;I&#x27;d love to go to &quot; + city.title() + &quot;!&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>7.2.5 　在循环中使用 continue</p>
+<p>要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用 continue 语句，它不像 break 语句那样不再执行余下的代码并退出整个循环。</p>
+<p>.3.1 　在列表之间移动元素:创建一个空的列表，原本的用pop调出，append调入，加上while循环即可。</p>
+<p>学习了：<strong>如何在程序中使用 input() 来让用户提供信息；如何处理文本和数字输入，以及如何使用 while 循环让程序按用户的要求不断地运行；多种控制 while循环流程的方式：设置活动标志、使用 break 语句以及使用 continue 语句；如何使用 while 循环在列表之间移动元素，以及如何从列表中删除所有包含特定值的元素；如何结合使用 while 循环和字典。</strong></p>
+<p><strong>第八章 函数</strong></p>
+<p>函数是带名字的代码块，用于完成具体的工作。</p>
+<p>8.1定义函数 —— def X（）：x为函数名（<strong>函数名不需要加引号哦，不是字符串</strong>！） 后面可以直接地调用函数名</p>
+<p>8.1.2将函数信息传递进去——在8.1的基础上，在括号里面填入变量，后期使用的时候变量为什么都可以直接带入函数式。可以说 <strong>填入的那个变量是形参，而后面真正调用进去的是实参</strong>。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">def greet_user(username):<br>&quot;&quot;&quot; 显示简单的问候语 &quot;&quot;&quot;<br>print(&quot;Hello, &quot; + username.title() + &quot;!&quot;)<br>greet_user(&#x27;jesse&#x27;)#这里变量就是username<br></code></pre></td></tr></table></figure>
+
+<p>8.2传递实参</p>
+<p>8.2.1位置实参——多个形参和实参位置顺序一一对应。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">def greet_user(username,gender):<br>     print(&quot;Hello, &quot; + username.title() +&quot;,you are a&quot;+gender)<br>greet_user(&#x27;jesse&#x27;,&#x27;girl&#x27;)#实参还是需要考虑是不是要加引号的<br></code></pre></td></tr></table></figure>
+
+<p>8.2.2关键字实参——用关键字实参来调用 describe_pet() 顺序不重要了，因为在形参里面已经将其一一对应。</p>
+<p>8.2.3默认值实参，在def的时候就给参数赋值，如果不声明，那就是默认参数为已经提前赋过值的。**使用默认值时，在形参列表中必须先列出没有默认值的形参，再列出有默认值的实参。这让 Python 依然能够正确地解读位置实参。(**有explaination，但是记住比较好）有默认值的放在没有参数默认值的后面。</p>
+<p>8.3 返回值</p>
+<p>函数并非总是直接显示输出，相反，它可以处理一些数据，并返回一个或一组值。函数返回的值被称为返回值。 用return函数 return+X</p>
+<p>可以返回字典，字符串，列表……..</p>
+<p>8.4传递列表：列表包含的可能是名字、数字或更复杂的对象（如字典）。结合for对列表进行循环。</p>
+<p>如果要修改列表：老生常谈，先建立新列表，然后旧的pop，新的append。当然，如果不想原列表修改，可以创建copy版本：切片表示法 [:] 创建列表的副本</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">print_models(unprinted_designs[:], completed_models)<br></code></pre></td></tr></table></figure>
+
+<p>8.5　传递任意数量的实参——将多个实参，用一个<strong>元组</strong>封装。（如果需要用位置实参，则把代表元组的那个形参放在最后位置)</p>
+<p>8.6使用任意数量的关键字实参 :我们无法确认input会出现什么并且和什么一一对应时，我们可以将一个形参形式为<strong>字典。通过我们自己在那个字典中的键值对一一对应（for遍历），便可得到很好地信息。</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs text">def build_profile(first, last, **user_info):<br>&quot;&quot;&quot; 创建一个字典，其中包含我们知道的有关用户的一切 &quot;&quot;&quot;<br>profile = &#123;&#125;<br> profile[&#x27;first_name&#x27;] = first<br>profile[&#x27;last_name&#x27;] = last<br>for key, value in user_info.items():<br>    profile[key] = value<br>return profile<br>user_profile = build_profile(&#x27;albert&#x27;, &#x27;einstein&#x27;,<br>location=&#x27;princeton&#x27;,<br>field=&#x27;physics&#x27;)<br>print(user_profile)      #这里的**user_info就是字典，加上我们用的for 在字典中的遍历，就可以得到完整消息。<br></code></pre></td></tr></table></figure>
+
+<p>8.6 　将函数存储在模块中 用import+函数名</p>
+<p>8.6.2使用 as 给函数指定别名 from xxx import xx as xxx.\ import xxx as xxxx.</p>
+<p>8.6.3使用星号（ * ）运算符可让 Python 导入模块中的所有函数(用的不多，如果是大模块函数，不得歇菜）</p>
+<p>学习了：<strong>如何编写函数，以及如何传递实参，让函数能够访问完成其工作所需的信息；如何使用位置实参和关键字实参，以及如何接受任意数量的实参；显示输出的函数和返回值的函数；如何将函数同列表、字典、 if 语句和 while 循环结合起来使用。还知道了如何将函数存储在被称为 模块 的独立文件中。</strong></p>
+<p><strong>第九章 类</strong></p>
+<p>编写类时，你定义一大类对象都有的通用行为。基于类创建 对象 时，每个对象都自动具备这种通用行为，然后可根据需要赋予每个对象独特的个性。</p>
+<p>类，就是对象。类里面构造成员变量和成员函数；函数想成是方法，变量想成属性。</p>
+<p>9.1.1 　创建 Dog 类，给与这个特别的dog类特别的function——class x（）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs text">class Dog():<br> &quot;&quot;&quot; 一次模拟小狗的简单尝试 &quot;&quot;&quot;<br> def __init__(self, name, age):<br>&quot;&quot;&quot; 初始化属性 name 和 age&quot;&quot;&quot;<br> self.name = name<br>self.age = age#这几步是必不可少的初始化过程！<br> def sit(self):<br>&quot;&quot;&quot; 模拟小狗被命令时蹲下 &quot;&quot;&quot;<br>print(self.name.title() + &quot; is now sitting.&quot;)<br>def roll_over(self):<br>&quot;&quot;&quot; 模拟小狗被命令时打滚 &quot;&quot;&quot;<br>print(self.name.title() + &quot; rolled over!&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>9.1.2 类中的函数都叫<strong>方法，</strong>普遍适用。（我目前的感觉好像如果没有必要创造类的话，可以直接创建函数，省去了很多麻烦）</p>
+<p>方法 <strong>init</strong>() 定义成了包含三个形参： self 、 name 和 age 。在这个方法的定义中，形参 self 必不可少，还必须位于其他形参的前面。以 <strong>self 为前缀的变量都可供类中的所有方法使用</strong>，我们还可以通过类的任何实例来访问这些变量。</p>
+<p>换句话说：self就是你一开始先创建了一个class，但是没有给具体的名字之前的统一名字，就像你在中国出生，你不知道叫什么名字，但是我可以喊你中国人。<strong>self是在为class编写instance method的时候，放在变量名的第一个位置的站位词。在具体的method中（class中的方法）可以不用self这个变量（def method（self）即可，在method里面都写self，方便后面出现了真的实例X后，可以直接调用）。</strong></p>
+<p>方法 <strong>init</strong>() 并未显式地包含 return 语句，但 Python 自动返回一个表示这条小狗的实例。我们将这个实例存储在变量 my_dog 中。给出实例后，后面需要调用方法，用<strong>实例.函数名（）即可</strong>。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">class Dog():<br>--snip--<br> my_dog = Dog(&#x27;willie&#x27;, 6)# my_dog就是实参<br> print(&quot;My dog&#x27;s name is &quot; + my_dog.name.title() + &quot;.&quot;)<br> print(&quot;My dog is &quot; + str(my_dog.age) + &quot; years old.&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>给属性和方法需要名字正常一点，方便能直接看出来方法是什么意思。</p>
+<p>9.2给属性设定默认值（self.X=一个值）在self的时候这样给出，就相当于设定了默认值了。</p>
+<p>9.3修改属性的值</p>
+<p>方法一：直接访问实例，给他赋值：X=Y；</p>
+<p>方法二：通过方法来修改：给出一个def方法，然后给这个方法中一个实参。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">class Car():<br>--snip--<br>def update_odometer(self, mileage):<br>&quot;&quot;&quot; 将里程表读数设置为指定的值 &quot;&quot;&quot;<br>self.odometer_reading = mileage<br>my_new_car = Car(&#x27;audi&#x27;, &#x27;a4&#x27;, 2016)<br>print(my_new_car.get_descriptive_name())<br> my_new_car.update_odometer(23)<br>my_new_car.read_odometer()<br></code></pre></td></tr></table></figure>
+
+<p>方法三：通过方法对属性的值进行递增（一种新的代码方法，不是直接赋值，而是用x+=Y）不停的给方法输入不同的y来达到递增的效果。</p>
+<p>9.3 继承</p>
+<p>编写类时，并非总是要从空白开始。如果你要编写的类是另一个现成类的特殊版本，可使用 继承 。一个类继承另一个类时，它将自动获得另一个类的所有属性和方法；原有的类称为<strong>父类</strong>而新类称为<strong>子类</strong> 。子类继承了其父类的所有属性和方法，同时还可以定义自己的属性和方法。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs text">class Car():<br>&quot;&quot;&quot; 一次模拟汽车的简单尝试 &quot;&quot;&quot;<br>def __init__(self, make, model, year):<br>self.make = make<br>self.model = model<br>self.year = year<br>self.odometer_reading = 0<br>def get_descriptive_name(self):<br>long_name = str(self.year) + &#x27; &#x27; + self.make + &#x27; &#x27; + self.model<br> return long_name.title()<br>def read_odometer(self):<br>print(&quot;This car has &quot; + str(self.odometer_reading) + &quot; miles on it.&quot;)<br>def update_odometer(self, mileage):<br>if mileage &gt;= self.odometer_reading:<br>self.odometer_reading = mileage<br>else:<br>print(&quot;You can&#x27;t roll back an odometer!&quot;)<br>def increment_odometer(self, miles):<br>self.odometer_reading += miles<br> class ElectricCar(Car):<br>&quot;&quot;&quot; 电动汽车的独特之处 &quot;&quot;&quot;<br> def __init__(self, make, model, year):<br>&quot;&quot;&quot; 初始化父类的属性 &quot;&quot;&quot;<br> super().__init__(make, model, year)##这个函数很特殊，用init来调用父类的方法，注意，后面的参数不需要有self.<br> my_tesla = ElectricCar(&#x27;tesla&#x27;, &#x27;model s&#x27;, 2016)<br>print(my_tesla.get_descriptive_name())<br></code></pre></td></tr></table></figure>
+
+<p>1.创建子类时，父类必须在子类的前面先创建好。</p>
+<p>2.定义子类时，必须在括号内指定父类的名称。方法 <strong>init</strong>() 接受创建。</p>
+<p>9.3.3 　给子类定义属性和方法——创建完子类后，在里面定义新的就好。但是不用写在init里面，init里面是之前父类的。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs text">class Car():<br>--snip--<br>class ElectricCar(Car):<br>&quot;&quot;&quot;Represent aspects of a car, specific to electric vehicles.&quot;&quot;&quot;<br>def __init__(self, make, model, year):<br>&quot;&quot;&quot;<br>电动汽车的独特之处<br>初始化父类的属性，再初始化电动汽车特有的属性<br>&quot;&quot;&quot;<br>super().__init__(make, model, year)<br>❶ self.battery_size = 70<br>❷ def describe_battery(self):#这里的self应该就是指新的electriccar的self吧<br>&quot;&quot;&quot; 打印一条描述电瓶容量的消息 &quot;&quot;&quot;<br>print(&quot;This car has a &quot; + str(self.battery_size) + &quot;-kWh battery.&quot;)<br>my_tesla = ElectricCar(&#x27;tesla&#x27;, &#x27;model s&#x27;, 2016)<br>print(my_tesla.get_descriptive_name())<br>my_tesla.describe_battery(<br></code></pre></td></tr></table></figure>
+
+<p>9.3.4重写父类的方法：在子类中定义一个新的方法：方法名和父类要一样。</p>
+<p>9.3.5将实例用作属性：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs text">class Car():<br>--snip--<br>❶ class Battery():<br>&quot;&quot;&quot; 一次模拟电动汽车电瓶的简单尝试 &quot;&quot;&quot;<br>❷ def __init__(self, battery_size=70):<br>&quot;&quot;&quot; 初始化电瓶的属性 &quot;&quot;&quot;<br>self.battery_size = battery_size<br>❸ def describe_battery(self):<br>&quot;&quot;&quot; 打印一条描述电瓶容量的消息 &quot;&quot;&quot;<br>print(&quot;This car has a &quot; + str(self.battery_size) + &quot;-kWh battery.&quot;)<br>class ElectricCar(Car):<br>&quot;&quot;&quot; 电动汽车的独特之处 &quot;&quot;&quot;<br>def __init__(self, make, model, year):<br>&quot;&quot;&quot;<br>初始化父类的属性，再初始化电动汽车特有的属性<br>&quot;&quot;&quot;<br>super().__init__(make, model, year)<br>❹ self.battery = Battery()#NB！！这个特别关键，先创建一个electriccar属性self.battery，再将另一个类battery（）等于这个实例，从而electricacar类属性中就有了battery类了<br>my_tesla = ElectricCar(&#x27;tesla&#x27;, &#x27;model s&#x27;, 2016<br>print(my_tesla.get_descriptive_name())<br>my_tesla.battery.describe_battery()#实参.类中类.类种类的方法<br></code></pre></td></tr></table></figure>
+
+<p>9.4 导入类 多了一句 from X（文件名）import（文件中的类）。很简单，不赘述。</p>
+<p>本章学习：<strong>如何编写类；如何使用属性在类中存储信息，以及如何编写方法，以让类具备所需的行为；如何编写方法 <strong>init</strong>() ，以便根据类创建包含所需属性的实例。如何修改实例的属性 —— 包括直接修改以及通过方法进行修改。使用继承可简化相关类的创建工作；将一个类的实例用作另一个类的属性可让类更简洁。通过将类存储在模块中，并在需要使用这些类的文件中导入它们，可让项目组织有序。</strong></p>
+<p><strong>至此，你掌握了编写组织有序而易于使用的程序所需的基本技能，该考虑让程序目标更明确、用途更大了。本文到此结束。</strong></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/20/Python%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%BB%AD%EF%BC%89/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python学习（续）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/12/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="hidden-mobile">ppython数据分析</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

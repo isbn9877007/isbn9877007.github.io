@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Python学习（续） - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Python学习（续）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-20 09:32" pubdate>
+        March 20, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      65
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python学习（续）</h1>
+            
+            <div class="markdown-body">
+              <p>本文是接着上面python语法书继续的。之所以愤慨来写，算是从pyhon的内（语法）到外（外部程序之间的互动）来变化的。下面让我们开始新的旅程！</p>
+<p>第十章 文件和异常</p>
+<p>10.1 　从文件中读取数据</p>
+<p>1.读取整个文件：</p>
+<p>先打开这个文件：with open（文件名）as x（自己起个名）：</p>
+<p>定义一个变量A——A=文件名.read（），再print这个变量就好咯</p>
+<p>10.1.2 文件路径</p>
+<p>分为相对路径和绝对路径。相对文件路径让 Python 到指定的位置去查找，而该位置是相对于当前运行的程序所在目录的。绝对路径就是完整的最详细的位置。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">file_path = &#x27;/home/ehmatthes/other_files/text_files/filename.txt&#x27;<br>with open(file_path) as file_object:#给出绝对路径的例子<br></code></pre></td></tr></table></figure>
+
+<p>10.1.3逐行读取： for 循环—— for line in X：；如果需要把换行空格去掉，用line.rstrip（）</p>
+<p>10.1.4创建一个包含文件各行内容的列表</p>
+<p>X.readlines() 从文件中读取每一行，并将其存储在一个列表中.</p>
+<p>ps：读取文本文件时， Python 将其中的所有文本都解读为<strong>字符串</strong>。如果你读取的是数字，并要将其作为数值使用，就必须使用<strong>函数 int() 将其转换为整数</strong>，或<strong>使用函数 float() 将其转换为浮点数</strong>。</p>
+<p>可使用方法 replace() 将字符串中的特定单词都替换为另一个单词 replace（‘a’，’b’）用b将a替换了。</p>
+<p>10.2 写入、操作文件</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">with open（文件名，“模式”）as file：<br></code></pre></td></tr></table></figure>
+
+<p>这里的模式有几种：‘w’写入模式；‘r’读取模式；’a’附加模式；‘r+’读取+写入模式；</p>
+<p>写入模式，如果文件名称相同，会自动清空先前同名文件。写入的方法：X.write()</p>
+<p>ps：Python 只能将字符串写入文本文件。要将数值数据存储到文本文件中，必须先使用函数 <strong>str() 将其转换为字符串格式。</strong></p>
+<p>10.3 异常</p>
+<p>异常是使用 try-except 代码块处理的。 try-except 代码块让 Python 执行指定的操作，同时告诉 Python 发生异常时怎么办。使用了 try-except 代码块时，即便出现异常，程序也将继续运行：显示你编写的友好的错误消息，而不是令用户迷惑的 traceback 。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">try:<br>    print(5/0)<br>except ZeroDivisionError:<br>     print(&quot;You can&#x27;t divide by zero!&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>try-except语句块应该最好和else一起；错了就try-except，对了就else。</p>
+<p>10.3.6 分析文本</p>
+<p>1.计算文本数字个数——X.split（）</p>
+<p>方法 split() 以空格为分隔符将字符串分拆成多个部分，并将这些部分都存储到一个列表中。<strong>列表中的元素个数就是文本个数</strong></p>
+<p>2.使用多个文件，都差不多。多个文件用for循环。</p>
+<p>10.4 储存数据——<strong>模块json</strong></p>
+<p>模块 json 让你能够将简单的 Python 数据结构转储到文件中，并在程序再次运行时加载该文件中的数据。</p>
+<p>10.4.1 json.dump（）和json.load（）</p>
+<p>json.dump（文件数据，将要储存文件数据的文件名）</p>
+<p>X.json——将X文件变为json的数据格式</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">import json<br>numbers = [2, 3, 5, 7, 11, 13]<br>filename = &#x27;numbers.json&#x27;<br> with open(filename, &#x27;w&#x27;) as f_obj:<br>json.dump(numbers, f_obj)<br></code></pre></td></tr></table></figure>
+
+<p>json.load(文件名)——读取文件</p>
+<p>学习了：<strong>如何使用文件；如何一次性读取整个文件，以及如何以每次一行的方式读取文件的内容；如何写入文件，以及如何将文本附加到文件末尾；什么是异常以及如何处理程序可能引发的异常；如何存储 Python 数据结构，以保存用户提供的信息，避免用户每次运行程序时都需要重新提供。</strong></p>
+<p>11 测试函数</p>
+<p>Python 标准库中的模块 unittest 提供了代码测试工具。</p>
+<p>单元测试： 用于核实函数的某个方面没有问题</p>
+<p>测试用例： 是一组单元测试，这些单元测试一起核实函数在各种情形下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情形的测试。</p>
+<p>全覆盖式测试 ：包含一整套单元测试，涵盖了各种可能的函数使用方式。</p>
+<p>新手可以先不考虑，后期进入学习。</p>
+<hr>
+<p>彻底的进入了项目的实践过程，路漫漫其修远兮！！！有三个项目：</p>
+<p>1.使用 Python 开发游戏</p>
+<p>2.数据可视化</p>
+<p>3.Web 应用程序</p>
+<p>第一个我选择的是数据可视化。</p>
+<p>1.1.使用matplotlib绘制简单的折线图 .pylot模块中有很多用于生成图标的函数. <a href="https://link.zhihu.com/?target=http://plt.show/">plt.show</a>() 打开 matplotlib 查看器，并显示绘制的图形。.polt（）用于生成数据的函数</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>squares = [1, 4, 9, 16, 25]<br>plt.plot(squares)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p>1.2.修改标签文字和线条粗细——参数linewidth决定了绘制线条的粗细；fontsize决定了字体的大小;title,xlable,ylable;tick_params决定了刻度的样式，lablesize表示刻度的大小</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>suqares=[2,4,5,6,7,8,9,10]<br>plt.plot（squares，linewidth=10）<br>plt.title（&quot;Fucking Mother&quot;,fontsize=10）<br>plt.xlable(&quot;frequency&quot;,fontsize=5)<br>plt.ylable(&quot;times&quot;,fontsize=5)<br>plt.tick_params(axis=&#x27;both&#x27;, labelsize=14)<br>plt.show（）<br></code></pre></td></tr></table></figure>
+
+<p>1.3.矫正polt图形定制——主动给出输入值和对应的输出值，这样就肯定不会出错（因为默认plot函数中给出的第一个值的x坐标为0）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pylot as plt<br>inputs=[1,2,3,4,5,6,7]<br>outputs=[1,4,9,16,25,36,49]<br>plt.plot(inputs,outputs,linewidth=10)<br>plt.title(&quot;HELLO&quot;,fontsize=14)<br>plt.xlable(&quot;frequency&quot;,fontsize=10)<br>plt.ylable(&quot;time&quot;,fontsize=10)<br>plt.tick_params(axis=&quot;both&quot;,lablesize-10)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p>2.1使用 scatter() 绘制散点图并设置其样式——要绘制单个点，可使用函数 scatter() ，并向它传递一对 x 和 y 坐标，它将在指定位置绘制一个点。</p>
+<p>2.2绘制一系列的点：用range！</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>x_values = list(range(1, 1001))#这是精华，也是核心<br>y_values = [x**2 for x in x_values]<br>plt.scatter(x_values, y_values, s=40)<br>plt.title(&quot;HELLO&quot;,fontsize=14)<br>plt.xlable(&quot;frequency&quot;,fontsize=10)<br>plt.ylable(&quot;time&quot;,fontsize=10)<br>plt.tick_params(axis=&quot;both&quot;,lablesize-10)<br># 设置每个坐标轴的取值范围<br>plt.axis([0, 1100, 0, 1100000])<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p>2.3删除数据点的轮廓（迷惑ing）：说什么点太多会糊起来…..edgcolor=‘none’即可删除</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">plt.scatter(x_values, y_values, edgecolor=&#x27;none&#x27;, s=40)<br></code></pre></td></tr></table></figure>
+
+<p>2.4自定义点的颜色</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">plt.scatter(x_values.y_values,c=&quot;red&quot;,edgcolor=&quot;none&quot;,s=50)<br>plt.scatter（x_values.y_values,c=(0,0,1),edgcolor=&quot;none&quot;,s=50）#用RGB来表示色点<br></code></pre></td></tr></table></figure>
+
+<p>2.5使用随机映射：。在可视化中，颜色映射用于突出数据的规律，例如，你可能用较浅的颜色来显示较小的值，并使用较深的颜色来显示较大的值。cmap为参数——plt.cm.颜色</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>x_values = list(range(1001))<br>y_values = [x**2 for x in x_values]<br>plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,<br>edgecolor=&#x27;none&#x27;, s=40)<br></code></pre></td></tr></table></figure>
+
+<p>3.1随机漫步——用python生成随机数据，并用matplotlib可视化。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs text">from random import choice#这里我们使用了很多的choice（）函数<br>class RandomWalk():<br>&quot;&quot;&quot; 一个生成随机漫步数据的类 &quot;&quot;&quot;<br><br>def __init__(self, num_points=5000):<br>&quot;&quot;&quot; 初始化随机漫步的属性 &quot;&quot;&quot;<br>self.num_points = num_points<br># 所有随机漫步都始于 (0, 0)<br>self.x_values = [0]<br>self.y_values = [0]<br><br>def fill_walk(self):<br>&quot;&quot;&quot; 计算随机漫步包含的所有点 &quot;&quot;&quot;<br># 不断漫步，直到列表达到指定的长度<br>while len(self.x_values) &lt; self.num_points:<br># 决定前进方向以及沿这个方向前进的距离<br>x_direction = choice([1, -1])#选择方向，1或者-1，1为正方向，-1为负方向<br>x_distance = choice([0, 1, 2, 3, 4])#每次走的步长可以从0选到4<br>x_step = x_direction * x_distance<br>y_direction = choice([1, -1])<br>y_distance = choice([0, 1, 2, 3, 4])<br>y_step = y_direction * y_distance<br># 拒绝原地踏步<br>if x_step == 0 and y_step == 0:<br>continue<br># 计算下一个点的 x 和 y 值<br>next_x = self.x_values[-1] + x_step<br>next_y = self.y_values[-1] + y_step<br>self.x_values.append(next_x)<br>self.y_values.append(next_y)<br></code></pre></td></tr></table></figure>
+
+<p>接下来用matplotlib可视化：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>from random_walk import RandomWalk<br># 创建一个 RandomWalk 实例，并将其包含的点都绘制出来<br>rw = RandomWalk()<br>rw.fill_walk()<br>plt.scatter(rw.x_values, rw.y_values, s=15)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p>给大家看一下跑的成果吧（中间跑的过程也是一波三折，里面有很多逻辑递归的小问题）</p>
+<p><img src="https://pic2.zhimg.com/80/v2-8d451c82357e577833558212c21aa3e5_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p><img src="https://pic2.zhimg.com/80/v2-6d70443983994bd15c6d5a2078d03c21_1440w.jpg" srcset="/img/loading.gif" alt="img">自定义颜色了一下</p>
+<p>ps：如果想要多次随机漫步：放在while循环，通过input输入yes or no来判断true/false（停止，继续）</p>
+<p>3.2设置随机漫步图的样式（接着之前的随机漫步文件）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">point_numbers = list(range(rw.num_points))<br>plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,<br>edgecolor=&#x27;none&#x27;, s=15)<br>plt.show()<br>keep_running = input(&quot;Make another walk? (y/n): &quot;)<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://pic4.zhimg.com/80/v2-912ddf6d196c4ed5ee9ec1dd874b85cf_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>跑了几次每次图片都不一样哈哈。</p>
+<p>突出了起点和终点！</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">import matplotlib.pyplot as plt<br>from random_walk import RandomWalk<br># 创建一个 RandomWalk 实例，并将其包含的点都绘制出来<br>rw = RandomWalk()<br>rw.fill_walk()<br>point_numbers = list(range(rw.num_points))<br>plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,<br>edgecolor=&#x27;none&#x27;, s=15)<br>plt.scatter(0,0,c=&quot;green&quot;,s=100)<br>plt.scatter(rw.x_values[-1],rw.y_values[-1],c=&quot;red&quot;,s=100)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://pic3.zhimg.com/80/v2-794bc96cb3dd03cecdb21d39c499c786_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>3.3.2隐藏坐标轴的方法：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">plt.axes().get_xaxis().set_visible(False)<br>plt.axes().get_yaxis().set_visible(False)<br></code></pre></td></tr></table></figure>
+
+<p>3.3.3设置绘图框口的尺寸： figure() 用于指定图表的宽度、高度、分辨率和背景色。你需要给形参 figsize 指定一个元组，向 matplotlib 指出绘图窗口的尺寸，单位为英寸。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">plt.figure(dpi=128, figsize=(10, 6)<br></code></pre></td></tr></table></figure>
+
+<p>在这本书里，我们只是很浅的入门了这个绘图包matplotlib。在后续的学习中，会更加深入的学习这个的!</p>
+<p>继续学习另一个可视化包 pygal：我们将使用 Python 可视化包 <strong>Pygal 来生成可缩放的矢量图形文件。对于需要在尺寸不同的屏幕上显示的图表，它们将自动缩放，以适合观看者的屏幕。</strong></p>
+<p><strong>创建一个模拟投色子的类，可以展现直方图</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs text">from random import randint<br>import pygal<br>class die():<br>    def _init_(self,num_sides=6):<br>        self.num_sides=num_sides<br>    def roll(self):<br>        return randint(1,self.num_sides)#randint 返回1到num_sides中的随机任意数<br>die=Die（）#这算是给一个类赋予了一个实例！！！后面die就相当于有这个类了，die.method,就是class 里面的方法！<br>results = []<br>for roll_num in range(1000):<br>result = die.roll()<br>results.append(result)<br>frequencies = []<br>for value in range(1, die.num_sides+1):<br>frequency = results.count(value)<br>frequencies.append(frequency)<br><br>hist = pygal.Bar()<br>hist.title = &quot;Results of rolling one D6 1000 times.&quot;<br>hist.x_labels = [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;]<br>hist.x_title = &quot;Result&quot;<br>hist.y_title = &quot;Frequency of Result&quot;<br>hist.add(&#x27;D6&#x27;, frequencies)<br>hist.render_to_file(&#x27;die_visual.svg&#x27;)<br></code></pre></td></tr></table></figure>
+
+<p>为创建条形图，我们创建了一个 <a href="https://link.zhihu.com/?target=http://pygal.bar/">pygal.Bar</a>() 实例，并将其存储在 hist 中，类似于外包中的类。设置 hist 的属性 title （用于标示直方图的字符串），将掷 D6 骰子的可能结果用作 x 轴的标签并给每个轴都添加了标题。我们使用 add() 将一系列值添加到图表中（向它传递要给添加的值指定的标签，还有一个列表，其中包含将出现在图表中的值）。最后，我们将这个图表渲染为一个 SVG 文件，这种文件的扩展名必须为 .svg 。</p>
+<p>给出结果：（需要变成SVG文件在网页中打开）</p>
+<p><img src="https://pic2.zhimg.com/80/v2-233f804200964ec31b4c0ce6c9c0d4d9_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>在本章中，学习了：<strong>如何生成数据集以及如何对其进行可视化；如何使用 matplotlib 创建简单的图表，以及如何使用散点图来探索随机漫步过程；如何使用 Pygal 来创建直方图，以及如何使用直方图来探索同时掷两个面数不同的骰子的结果。</strong></p>
+<p>下载数据并进行可视化</p>
+<p>1.CSV文件格式</p>
+<p>要在文本文件中存储数据，最简单的方式是将数据作为一系列 以逗号分隔的值 （ CSV ）写入文件。一般python用CSV模块来读取处理CSV文件数据。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">import csv<br>filename = &#x27;sitka_weather_07-2014.csv&#x27;<br>with open(filename) as f:<br>reader = csv.reader(f)#csv.reader（）用来读取文件<br>header_row = next(reader)#函数next，用它并将阅读器对象传递给它时，它将返回文件中的下一行<br>print(header_row)<br></code></pre></td></tr></table></figure>
+
+<p>reader 处理文件中以逗号分隔的第一行数据，并将每项数据都作为一个元素存储在列表中。</p>
+<p>1.2打印文件头及其位置——列表调用了 enumerate() 来获取每个元素的索引及其值,阅读器对象从<strong>其停留的地方继续往下读取 CSV 文件，每次都自动返回当前所处位置的下一行</strong>。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">import csv<br>filename = &#x27;sitka_weather_07-2014.csv&#x27;<br>with open(filename) as f:<br>reader = csv.reader(f)<br>header_row = next(reader)<br>for index, column_header in enumerate(header_row):<br>print(index, column_header)<br>highs=[]<br>for row in reader()：<br>     highs.append（row[1])<br>print(highs)<br></code></pre></td></tr></table></figure>
+
+<p>1.3模块datetime——将一些字符串数据转换成相应对应的日期对象，使用了datetime.strptime（X，Y）x为字符串实参，y为对应的设置格式（通过-来断开）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">from datetime import datetime<br>first_date = datetime.strptime(&#x27;2014-7-1&#x27;, &#x27;%Y-%m-%d&#x27;)<br>print(first_date)<br>2014-07-01 00:00:00<br></code></pre></td></tr></table></figure>
+
+<p>模块 datetime 中设置日期和时间格式的实参：</p>
+<p>%A（星期英文）；%B（月份英文）；%M（月份数字）；%D(月中的某一天数字）；%Y（四位的年份数字）；%y（两位的年份数字）；%H（24小时的小时数）；%I(12小时的小时数）；%p（am或pm）；%M（分钟数）%S（秒数）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs text">import csv<br>from datetime import datetime<br>from matplotlib import pyplot as plt<br># 从文件中获取日期和最高气温<br>filename = &#x27;sitka_weather_07-2014.csv&#x27;<br>with open(filename) as f:<br>reader = csv.reader(f)<br>header_row = next(reader)<br>dates, highs = [], []<br>for row in reader:<br>current_date = datetime.strptime(row[0], &quot;%Y-%m-%d&quot;)<br>dates.append(current_date)<br>high = int(row[1])<br>highs.append(high)<br># 根据数据绘制图形<br>fig = plt.figure(dpi=128, figsize=(10, 6))<br>plt.plot(dates, highs, c=&#x27;red&#x27;)<br># 设置图形的格式<br>plt.title(&quot;Daily high temperatures, July 2014&quot;, fontsize=24)<br>plt.xlabel(&#x27;&#x27;, fontsize=16)<br>fig.autofmt_xdate()#调用了 fig.autofmt_xdate() 来绘制斜的日期标签，以免它们彼此重叠。<br>plt.ylabel(&quot;Temperature (F)&quot;, fontsize=16)<br>plt.tick_params(axis=&#x27;both&#x27;, which=&#x27;major&#x27;, labelsize=16)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p>如果是需要在一个表格中绘制多个数据：也就是多一个列表，然后plot（这是最简单的形式，后面还有很多复杂的）其实这个思维还蛮重要</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs text">filename = &#x27;sitka_weather_2014.csv&#x27;<br>with open(filename) as f:<br>reader = csv.reader(f)<br>header_row = next(reader)<br>dates, highs, lows = [], [], []<br>for row in reader:<br>current_date = datetime.strptime(row[0], &quot;%Y-%m-%d&quot;)<br>dates.append(current_date)<br>high = int(row[1])<br>highs.append(high)<br>low = int(row[3])<br>lows.append(low)<br># 根据数据绘制图形<br>fig = plt.figure(dpi=128, figsize=(10, 6))<br>plt.plot(dates, highs, c=&#x27;red&#x27;)<br>plt.plot(dates, lows, c=&#x27;blue&#x27;)<br> # 设置图形的格式<br> plt.title(&quot;Daily high and low temperatures - 2014&quot;, fontsize=24)<br>--snip--<br></code></pre></td></tr></table></figure>
+
+<p>2.1 开始json文件的可视化</p>
+<p>（回顾一下字典：X[键]=值）<strong>因为json的格式和字典很像！处理json文件的话，一般是把json格式转化为python中的字典。</strong></p>
+<p>print只能打印字符串，如果有数字先变成str格式。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs text">import json<br># 将数据加载到一个列表中<br>filename = &#x27;population_data.json&#x27;<br>with open(filename) as f:<br>pop_data = json.load(f)<br># 打印每个国家 2010 年的人口数量<br>for pop_dict in pop_data:<br>if pop_dict[&#x27;Year&#x27;] == &#x27;2010&#x27;:<br>country_name = pop_dict[&#x27;Country Name&#x27;]<br>population = pop_dict[&#x27;Value&#x27;]<br>print(country_name + &quot;: &quot; + population)<br></code></pre></td></tr></table></figure>
+
+<p>Python 不能直接将包含小数点的字符串 ‘1127437398.85751’ 转换为整数。为消除这种错误，我们先将字符串转换为浮点数，再将浮点数转换为整数int（float（12345））——类似于四舍五入吧.</p>
+<p>下面用pygal来描绘世界地图：主要用了pygal.worldmap（）</p>
+<p>pygal.worldmap.add（）——它接受一个标签和一个列表，其中后者包含列表数据（数据可以现场填入修改）。每次调用 add() 都将为指定列表数据选择一种新颜色，并在图表左边显示该颜色和指定的标签。（这个我已经玩过了hhhhh）</p>
+<p>pygal.style（）可以设计一些图表的样式</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">import pygal<br>❶ wm = pygal.Worldmap()<br>wm.title = &#x27;North, Central, and South America&#x27;<br>❷ wm.add(&#x27;North America&#x27;, [&#x27;ca&#x27;, &#x27;mx&#x27;, &#x27;us&#x27;])<br>wm.add(&#x27;Central America&#x27;, [&#x27;bz&#x27;, &#x27;cr&#x27;, &#x27;gt&#x27;, &#x27;hn&#x27;, &#x27;ni&#x27;, &#x27;pa&#x27;, &#x27;sv&#x27;])<br>wm.add(&#x27;South America&#x27;, [&#x27;ar&#x27;, &#x27;bo&#x27;, &#x27;br&#x27;, &#x27;cl&#x27;, &#x27;co&#x27;, &#x27;ec&#x27;, &#x27;gf&#x27;,<br>&#x27;gy&#x27;, &#x27;pe&#x27;, &#x27;py&#x27;, &#x27;sr&#x27;, &#x27;uy&#x27;, &#x27;ve&#x27;])<br>❸ wm.render_to_file(&#x27;americas.svg&#x27;)<br></code></pre></td></tr></table></figure>
+
+<p>学习了：如何处理 CSV 和 JSON 文件，以及如何提取你感兴趣的数据；如何使用 matplotlib 来处理以往的天气数据，包括如何使用模块 datetime ，以及如何在同一个图表中绘制多个数据系列；如何使用 Pygal 绘制呈现各国数据的世界地图，以及如何设置 Pygal 地图和图表的样式。有了使用 CSV 和 JSON 文件的经验后，将能够处理几乎任何要分析的数据。大多数在线数据集都可以以这两种格式中的一种或两种下载。</p>
+<p><strong>学习使用API—— Web 应用编程接口</strong></p>
+<p>Web API 是网站的一部分，用于与使用非常具体的 URL 请求特定信息的程序交互。这种请求称为 API 调用。请求的数据将以易于处理的格式（如 JSON 或 CSV ）返回。</p>
+<p>1.2request包&amp;处理API响应（似乎就是多了一步哎…）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">import requests<br># 执行 API 调用并存储响应<br>url = &#x27;https://api.github.com/search/repositories?q=language:python&amp;sort=stars&#x27;<br>r = requests.get(url)#调用 get() 并将 URL 传递给它，再将响应对象存储在变量 r 中。响应对象包含一个名为 status_code 的属性，它让我们知道请求是否成功了（状态码 200 表示请求成功）<br>print(&quot;Status code:&quot;, r.status_code)<br># 将 API 响应存储在一个变量中<br>response_dict = r.json()#python会自动的parse json格式进入字典格式<br># 处理结果<br>print(response_dict.keys())<br></code></pre></td></tr></table></figure>
+
+<p>1.3利用pygal将仓库信息可视化</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs text">import requests<br>import pygal<br>from pygal.style import LightColorizedStyle as LCS, LightenStyle as LS<br># 执行 API 调用并存储响应<br>URL = &#x27;https://api.github.com/search/repositories?q=language:python&amp;sort=star&#x27;<br>r = requests.get(URL)<br>print(&quot;Status code:&quot;, r.status_code)<br># 将 API 响应存储在一个变量中<br>response_dict = r.json()<br>print(&quot;Total repositories:&quot;, response_dict[&#x27;total_count&#x27;])<br># 研究有关仓库的信息<br>repo_dicts = response_dict[&#x27;items&#x27;]<br>names, stars = [], []<br>for repo_dict in repo_dicts:<br>names.append(repo_dict[&#x27;name&#x27;])<br>stars.append(repo_dict[&#x27;stargazers_count&#x27;])<br># 可视化<br>my_style = LS(&#x27;#333366&#x27;, base_style=LCS)<br>chart = pygal.Bar(style=my_style, x_label_rotation=45, show_legend=False)<br>chart.title = &#x27;Most-Starred Python Projects on GitHub&#x27;<br>chart.x_labels = names<br>chart.add(&#x27;&#x27;, stars)<br>chart.render_to_file(&#x27;python_repos.svg&#x27;)<br></code></pre></td></tr></table></figure>
+
+<p>主要看pygal；我们使用 LightenStyle 类（别名 LS ）定义了一种样式，并将其基色设置为深蓝色。我们还传递了实参 base_style ，以使用 LightColorizedStyle类（别名 LCS ）。然后，我们使用 Bar() 创建一个简单的条形图，并向它传递了 my_style。我们还传递了另外两个样式实参：让标签绕 x 轴旋转 45 度 x_label_rotation=45。我们给图表定了标题，并将属性 x_labels设置为列表 names 。</p>
+<p>1.4在图标中给出可点击的链接——只需添加一行代码，在为每个项目创建的字典中，添加一个键为 ‘xlink’ 的键 — 值对。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">‘xlink’：字典名[&#x27;html_url&#x27;]<br></code></pre></td></tr></table></figure>
+
+<p>学习了：<strong>如何使用 API 来编写独立的程序，它们自动采集所需的数据并对其进行可视化；使用 GitHub API 来探索 GitHub 上星级最高的 Python 项目.如何使用 requests 包来自动执行 GitHub API 调用，以及如何处理调用的结果。还简要地介绍了一些 Pygal 设置，使用它们可进一步定制生成的图表的外观。</strong></p>
+<p>到此为止，可视化的项目就全部结束了。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/20/pPython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E8%AF%AD%E6%B3%95%EF%BC%89/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">pPython数据分析（语法）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/20/Python%E5%AD%A6%E4%B9%A0/">
+                        <span class="hidden-mobile">Python学习</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

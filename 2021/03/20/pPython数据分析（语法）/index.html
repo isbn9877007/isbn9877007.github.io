@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>pPython数据分析（语法） - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="pPython数据分析（语法）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-20 09:34" pubdate>
+        March 20, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      69
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">pPython数据分析（语法）</h1>
+            
+            <div class="markdown-body">
+              <p>一、数据</p>
+<p>结构化数据：</p>
+<p>1.多维数组——矩阵</p>
+<p>2.表格型数据（关系型数据库中的数据）</p>
+<p>3.通过关键列相连接的表</p>
+<p>4.间隔平均或者不平均的时间序列</p>
+<p>二、关于iPython</p>
+<p>三、Numpy学习</p>
+<p>numpy是高性能科学计算和数据分析的基础包。它本身没有太多高级分析的功能，重点在于理解<strong>Numpy数组以及面向数组的计算</strong>。</p>
+<p>1.Numpy.ndarray</p>
+<p>ndarray中的元素必须都是相同类型，每个数组都有一个shape（一个表示各维度大小的元组,也就是几行几列）+一个dtype（说明数组类型的对象，数字啊还是字母什么的）</p>
+<p>列表+np.array（列表） = 数组</p>
+<p>嵌套列表（等长）+np.array（列表） = 多维数组</p>
+<p>特殊的数组：np.array.zeros(x,y) 产生x行y列的全为0的数组</p>
+<p>np.array.ones（x，y）全为1</p>
+<p>np.arrary.empty(x，y）产生x行y列的随机数的数组</p>
+<p>np.arrange（）range的数组版</p>
+<p>ps：Numpy中的数组的dtype基本上是浮点数、复数、整数、布尔值….如果需要转换type的话，用np.array.astype（）</p>
+<p>2.数组与标量之间的运算</p>
+<p>数组与标量之间的运算很简单，是每一个数组里面的元素都和标量运算一遍，再返回到原有的索引位置。<strong>一维数组长得和列表差不多，</strong>很多功能也是很相似的。主要的区别在于：数组切片是原数组的视图，修改了元素之后，数据不会被赋值，而是直接反应到原数组上。（如果想要有副本，用copy（）函数）</p>
+<p>需要赋值就直接赋值即可，直接会被修改。</p>
+<p>3.矩阵中的元素索引</p>
+<p>在二维数组中，单一索引代表了是一维数组。要用元素的话索引得是[x][y[,表明寻求x行y列的那个元素。同理，一个索引降一维度，如果是n为数组，需要有[n][b][a]….[1]，n个索引才能达到最后的单独的一个元素。</p>
+<p>高阶维度的切片是沿着axis来切的。具体可以查阅别的blog.</p>
+<p>4.bool型索引</p>
+<p>numpy.random.randn（）可生成随机数据</p>
+<p>给出一个索引，满足索引条件的都会被打印出来。bool型索引可以和切片，整数序列混合使用。data[索引条件，切片]（切片不写默认全data），有了这个找一些数据或者调整一些数据就会变得很简单。</p>
+<p>5.数组转置和轴对换</p>
+<p>T属性（转置）np.arrange.T()</p>
+<p>np.dot函数计算转置数组和原数组的内积 <img src="https://www.zhihu.com/equation?tex=x%5Ctop+x+" srcset="/img/loading.gif" alt="[公式]"></p>
+<p>对于高维数组，需要得到转置的轴才能进行转置，用transpose方法。transpose进行的操作其实是将各个维度重置。</p>
+<p>还有一种swapaxes方法：接受一对轴编号进行变换。</p>
+<p>6.通用函数（nfunc）</p>
+<p>nfunc是针对ndarray里元素数据执行的函数。算是一般函数的矢量版。</p>
+<p>有一元nfunc，针对一组数组。二元nfunc，针对二组数组。</p>
+<p>7.利用数组处理数据</p>
+<p>用数组表达式代替循环的计算方法，称为<strong>矢量化。</strong></p>
+<p>单纯的数据计算还是很普通的。学到了np.meshgrid（）这样的方法。</p>
+<p><strong>8.将逻辑表述转化为数组运算</strong></p>
+<p><strong>numpy.where函数是三元表达式（x if condition else y）的矢量化版本。</strong></p>
+<p>在数据分析工作中，常常用where来从数组A生成新的数组B。</p>
+<p>numpy.where(cond,x,y)其中x，y不一定是数组，单纯的数据也行。where方法也可以进行逻辑上的嵌套。</p>
+<p><strong>数学和统计方法</strong></p>
+<p><strong>sum,mean，std，var，min，max，argmin，argmax，cumsum，cumprod</strong></p>
+<p>这些都是需要考虑axis（轴方向的）。</p>
+<p>用于bool型数组的方法</p>
+<p>1.sum对bool型数组里面的true和false个数计数（True为1，False为0）</p>
+<p>2.any 和all</p>
+<p>唯一化以及其他集合逻辑</p>
+<p>np.unique（）返回数组里面的唯一的元素（滤去重复的）</p>
+<p>np.in1d（x，12,3）看x中的数组元素是否有12,3.</p>
+<p><strong>9.用于数组以二进制输出输入</strong></p>
+<p>针对数组：一般用np.save（）和np.load（）</p>
+<p>针对文本文件：np.loadtxt（）和np.savetxt（）</p>
+<p>10.随机数生成</p>
+<p>np.random（）函数</p>
+<p><strong>四、pandas入门</strong></p>
+<p>1.pandas的数据结构介绍</p>
+<p><strong>Series和Dataframe</strong></p>
+<p>Series是由一组Numpy数组+各个数据的索引标签组成的类似于一维数组的对象。表现形式为左列为索引，右列为数据。</p>
+<p>Series.values获得数组，Series.index获得索引。</p>
+<p>Numpy数组的正常算法（加减乘除，条件过滤），在pandas中都会保留索引和值之间的连接。</p>
+<p>自然有时候也可以把Series看做一种字典。索引可以找到对应的数组。索引也可以通过<strong>直接赋值</strong>的方式进行修改。</p>
+<p>如有已生成的字典A，可以用个B = Series（A）来将字典转换成Series.</p>
+<p>在数据丢失的情况下，我们会发现Series出现了NaN（表示<strong>数据缺失</strong>）。</p>
+<p>对应的方法：pd.isnull（），pd.notnull（），Series.isnull（）</p>
+<p>Series的突出之处：<strong>在算数运算中它可以自动对齐不同索引的数据。</strong>（就是虽然不对齐，但是你知道应该要对齐的那些数据，很自动，很方便。）</p>
+<p>DataFrame是一种表格型数据结构。DataFrame既**有行索引也有列索引,**且面向行和面向列的操作基本上平衡。</p>
+<p><strong>有很多种构建DataFrame的方法</strong>：</p>
+<p>1.传入几个等长的数组（列表）作为一个整体的data，再用DataFrame（data）即可。和Series一样，DataFrame会自动添加索引。</p>
+<p>类似于字典取需要的数据的方法：DataFrame[“A”](A为其中的一个列），这样我们就可以得到类似于一个Series的数据，左边是索引，右边是DataFrame中的A列。同样可以进行类似的行操作DataFrame[S](S为某个行的标签）。</p>
+<p><strong>在DataFrame中赋值</strong>（主要几种）</p>
+<p>1可以直接赋值</p>
+<p>2也可以用一串数组赋值献给某个列（前提是长度要匹配）。</p>
+<p>3也可以用Series进行精确赋值(先建立一个新列A，再创建一个新SeriesB（有数组，有索引），再用DataFrame[‘A’] = B)</p>
+<p>在DataFrame中删除多余的列——del[“列名”]</p>
+<p>4 将嵌套字典（Series数组也差不多）赋给DataFrame.默认将外层字典的键作为了列名，内层字典的键作为了行索引（如果显示决定了索引，就按显示的来）。</p>
+<p>ps：如果设置了DataFrame中index和column中的name属性（DataFrame.index.name()）</p>
+<p>就会显示出来的。DataFrame.values（）的话，就会返回<strong>二维ndarray形式</strong>。</p>
+<p><strong>关于索引对象（略微知道即可）</strong></p>
+<p>pandas的索引对象负责管理轴标签和其他元数据（如轴名称），构建Series和DataFrame时，数据标签都会转成index.</p>
+<p>index对象是不可修改的。</p>
+<p>2.基本功能</p>
+<p>重新索引：</p>
+<p>Series.reindex（），重新在括号里面写索引index即可。</p>
+<p>索引也有两种method:顺序填充，顺序填充ffill和倒序填充bfill.</p>
+<p>example:obj.reindex（[“1”,”2”,”3”,”4”,“5”],method = ffill）</p>
+<p>在DataFrame中，reindex可以修改整个行或者整个列。</p>
+<p>如果只传了一个序列，就默认是修改行的。如果要修改列的话，需要多加一个column关键字赋值。（A = 序列 ，reindex（column = A））</p>
+<p>当然，可以同时对行和列一起进行index的修改。</p>
+<p>丢弃指定轴上的数：</p>
+<p>在Series中，用Series.drop（index）函数，填哪些index，那一行或者一列就没有了。</p>
+<p>在DataFrame中，可以删去任意轴上的index值。（在二维中，axis=0为列，axis=1为行）</p>
+<p>关于Series的索引切片，方法类似于Numpy数组的索引，但是</p>
+<p>1.索引出来的结果不是整数，会给出series的结果样子</p>
+<p>2.切片是首尾的数字都包含的，而不是末尾-1</p>
+<p><img src="https://pic4.zhimg.com/80/v2-ac6325ac8bb50caf3c6b6b8fc29950df_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>在DataFrame中，方式也类似。因为DataFrame为二维的表格，会显得更加有逻辑性，可以通过切片data[0:2]或者bool型条件进行选择（类似于data[data[“Three”]&gt;5]）</p>
+<p>DataFrame中有独特的索引方法(选取原DataFrame中的行列子集）：</p>
+<p>data.ix[[“x’，“c”],[a,s,d]]前者为行名，后者为列名。（如果是单个行或列，就不需要加括号了）！我实名证明！Data.ix[]是真的好用！</p>
+<p>算术运算和数据对齐：</p>
+<p>Pandas中的数据相加，自动取<strong>并集</strong>(能正常计算的就继续计算，不能的就返回一个NaN)</p>
+<p>Series就是列并起来，DataFrame就是行和列同时搞定合并。</p>
+<p>如果不想返回一个NaN，就在合并的时候用add方法并且多加一个参数fill_value = X,这样就会返回X，而不是NaN了。Data1.add(Data2,fill_value = X)</p>
+<p>下面讲一下关于DataFrame和 Series之间的运算：</p>
+<p>将<strong>series对标DataFrame中的某一行</strong>，就可以进行计算。会沿着某一行（之前用ix设定的行）一行行往下传播。</p>
+<p>函数应用and映射：</p>
+<p>1.Numpy中的nfunc方法可以应用于操作Pandas对象。</p>
+<p>2.将函数应用到由各列或者各行组成的一维数组上。用pd.apply(f),f可以为自定义函数。（不太需要用，因为在设计的时候DataFrame的方法很多都可以直接用了 如sum mean）</p>
+<p>顺序和排名：</p>
+<p>Series——X.sort_index()or X.order（）</p>
+<p>DataFrame——X.sort_index(axis)#需要多加一个轴，便于排名，有单个/多个列需要给指定的列排序的话X.sort_index(by=”列名”or[“列名1”,”列名2”])</p>
+<p>需要<strong>降序</strong>的话，就多加一个参数 ascending = False（这里不是按大小排序，而是按照列标签）</p>
+<p>Data.rank（）用于排名</p>
+<p>带有重复值的轴索引：</p>
+<p>某个索引对应多个值，返回一个Series.某个索引对应单指，返回对应的值。</p>
+<p>汇总和计算描述统计：</p>
+<p>1.用于在Series中提取单值（sum、mean等）</p>
+<p>2.用于在DataFrame中提取一个Series。（多了需要考虑行列的方向轴axis）</p>
+<p>常见的一些方法：</p>
+<p>data.idmax() 返回某个轴的最大值索引或最小值索引。</p>
+<p>data.cumsum（）一行行或者一列列累加</p>
+<p>data.describe（）一次性返回很多数据。（针对Series和DataFrame中的Series来返回汇总数据）</p>
+<p>相关系数与协方差：</p>
+<p>data.A.corr（data.B）表示data中A列和B列之间的相关系数。</p>
+<p>data.A.cov(data.B)表示data中A列和B列之间的协方差系数。</p>
+<p>如果：<strong>data为Series，那就返回的是数据结果。如果是DataFrame，data.corr（）返回的是完整的相关系数，data.cov()返回的是完全的协方差矩阵。</strong></p>
+<p>具体在DataFrame中某一行或列与其他Series或者其他DataFrame，需要用data.corrrwith（）</p>
+<p>传入一个Series会返回一个相关系数值Series.</p>
+<p>传入一个DataFrame则会按名字返回配对的相关系数。</p>
+<p>还有一个很高级的pandas方法：data.value——count（在Series和DataFrame中都可以用，返回出现频率，按计数值降序排列）</p>
+<p><strong>处理缺失数据</strong>：</p>
+<p>Pandas中有专门的符号表示：NaN（表示浮点和非浮点数组中的缺失数据）</p>
+<p>如何过滤掉缺失数据：Series.dropna() 返回一个仅含非空数据和索引的Series</p>
+<p>对于DataFrame，dropna（）默认将所有含有NaN的行列都删去。（有点错杀的感觉）</p>
+<p>添加参数 how = ‘all’，这样将一列（行）全部都是NaN才删去</p>
+<p>填充缺失数据：</p>
+<p>1.用data.fillna（）不加参数默认将所有的NaN填入（）中的数据。</p>
+<p>2.字典方法 data.fillna（{列1：数据1；列2,：数据2}）</p>
+<p>层次化索引：</p>
+<p>层次化索引是一种高级功能，使能在一条轴上拥有<strong>多个索引级别</strong>。（以低维度形式处理高纬度数据）</p>
+<p>在DataFrame中，层次化索引很重要：通过unstack（）和stack（）方法，将一个拥有多重索引的轴的Series可以变成一个DataFrame.如图：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-b7348d4ff141d2dfae509e111c244c9e_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>重排分级顺序：</p>
+<p>用data.swaplevel（“key1”，“key2”）接受两个不同级别编号或者名称，并返回一个互换级别的对象。、</p>
+<p>用data.sortlevel（axis）来进行顺序排序（按大小）</p>
+<p>在DataFrame中，data.set_index()可以将一个列或者多个列转变成行索引，并创建一个新的DataFrame. data.reset<em>index()是</em>data.set_index的逆变化.</p>
+<p><strong>Numpy高级用法</strong></p>
+<p>ndarray对象的内部机理：</p>
+<p>组成：</p>
+<p>指向数组的指针+dtype+一个表示数组shape的元组+一个跨度元组（为了前进到当前维度的下一个元素所需要跨过的字节数）</p>
+<p><strong>高级数组操作</strong>：</p>
+<p>1.数组重塑</p>
+<p>reshape方法：（一般由低维度数组转到高纬度数组）array = A，A.reshape（x，y）x为外维，y为内维。y=-1是一种特殊表示，表示内维的数据个数，由外围和数组的总数据个数决定（比如总数据有20，外维为4，那么内维就为20/4=5）</p>
+<p>reshape的逆方法：</p>
+<p>1.raveling（扁平化）表现形式为Data.ravel（）——将高纬度数组转到低纬度数组。</p>
+<p>2.flatten方法 Data.flatten（）类似于ravel，但是不同在于返回的是<strong>副本</strong>。</p>
+<p>原理：数组排列的顺序方式：C和Fortran顺序。</p>
+<p>C顺序（行优先）：先处理高维度的axis</p>
+<p>F顺序（列优先）：先处理低维度的axis</p>
+<p>2.数组的合并与拆分</p>
+<p>numpy.concatenate(arr1，arr2，axis)用来合并数组（可以从不同的方向进行合并）</p>
+<p>别的方式：numpy.vstack((arr1，arr2))按列合并</p>
+<p>numpy.hstack((arr1,arr2))按行合并</p>
+<p>方法split(ary, indices_or_sections, axis=0) :把一个数组从左到右按顺序切分</p>
+<p>参数： ary:要切分的数组</p>
+<p>indices_or_sections:如果是一个整数，就用该数平均切分，如<strong>果是一个数组，为沿轴切分的位置（左闭右开）</strong> 比如原来的数组是0到9，按数组[1:3]切分：</p>
+<p>就会得到[[0],[1,2,],[3,4,5,6,7,8,9]]</p>
+<p>3.元素的重复操作：tile和repeat</p>
+<p>arr.repeat有几种用法：1.arr.repeat(num) 将原本arr中的元素重复num遍</p>
+<p>2.arr.repeat（[num1,num2,num3…]）针对不同元素重复不同的次数</p>
+<p>ps：最好设置axis。</p>
+<p>arr.title() 沿着指定axis堆叠副本（类似于铺瓷砖）</p>
+<p><strong>广播</strong>：（不同形状的数组之间的算数运算方式）</p>
+<p>1.数组和数字之间的运算，将运算到数组内的每一个元素中.</p>
+<p><img src="https://pic4.zhimg.com/80/v2-9be9ec880beb929c1c255dab6d5f442f_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p><strong>如果两个数组的最末尾开始算起的维度的轴长度相符或其中一方长度为1，那么我们认为这两个数组是兼容的，可以进行广播</strong>。</p>
+<p>如果是高维的数组，可以广播的条件就是：将低维度的数组需要沿某个轴的方向广播的那个轴，置1.看图：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-375b843c5d8a389fcedb3d12f69648e5_1440w.jpg" srcset="/img/loading.gif" alt="img"></p>
+<p>对于低维度的数组，如何插入那个为1的新axis：</p>
+<p>arr[:,np.newaxis,:]（全切片+newaxis方法）</p>
+<p>把newaxis放在前面的时候</p>
+<p>以前的shape是5，现在变成了1×5，也就是前面的维数发生了变化，后面的维数发生了变化</p>
+<p>而把newaxis放后面的时候，输出的新数组的shape就是5×1，也就是后面增加了一个维数</p>
+<p>所以，newaxis放在第几个位置，就会在shape里面看到相应的位置增加了一个维数。如果是前后都要“：”，那就是创建一个新的axis.</p>
+<p><strong>Ufunc高级应用</strong>：</p>
+<p>Numpy的<strong>二元nfunc</strong>有用于特定矢量化运算的特殊方法。</p>
+<p>np.add.reduce() 对数组中的各个元素进行求和。</p>
+<p>np.add.accumulate（） 产生一个和原数组相同大小的中间累计值的数组。</p>
+<p>还有一种方法可以增加维度，不用用newaxis：np.subtract.outer（X，Y）输出的结果维度是X和Y的维度之和。（可以用此升维）</p>
+<p>自定义nfunc：</p>
+<p>函数向量化的几种方法：</p>
+<p>1.np.frompyfunc（func,func中的参数个数，需要返回的参数格个数）此法需要先定义一个func。</p>
+<p>2.numpy.vectorize（func）</p>
+<p>在有序数组中查找元素：</p>
+<p>numpy.searchsorted（可仔细学习）</p>
+<p><strong>Numpy的Matrix类</strong></p>
+<p>Numpy为了减少繁琐的<strong>矩阵运算</strong>代码，直接提供了Matrix类：单列或单行会以二维形式返回，使用*符号直接就是矩阵乘法。（ps：没有太多的线性代数运算就可以不太用这个）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">Xm = np.matrix（x）<br>ym= Xm[:,0]#返回的就是二维的形式<br></code></pre></td></tr></table></figure>
+
+<p>Matrix的特殊属性：matrix.I（返回矩阵的逆矩阵）</p>
+<p>关于matrix类和正常ndarray的转换：Xm = np.matrix（x）</p>
+<p>Ym = np.assarray（xm）</p>
+<p><strong>高级数组的输出输入</strong></p>
+<p>Numpy实现了一个对象：memmap。这个可以将大文件分成小段进行读写，可以用于ndarray的都可以实现在memmap.</p>
+<p>mmap = np.memmap（“name”，“type”，“mode”，“shape”）就可创建一个新的mmap了.</p>
+<p>其他关于内存映像的没有深入研究。</p>
+<p>关于Numpy的性能建议：</p>
+<p>1.将python循环和条件循环尽量转变为数组运算和bool数组运算。</p>
+<p>2.尽量使用广播</p>
+<p>3.避免复制数据，尽量用数据视图（切片）</p>
+<p>4.利用ufunc的各种方法。</p>
+<p><strong>Matplotlib入门（绘图和可视化）</strong></p>
+<p>默认import matplotlib.pyplot as plt</p>
+<p>Figure和Subplot</p>
+<p>用plt.figure()可创建一个新的figure对象，add_subplot可创建子图</p>
+<p>可以通过plt.subplot_adjust()来调整subplot之间的间距。</p>
+<p>还有一些可以调标签，自定义标签。</p>
+<p>通过label参数可以增加图例。ax.legend（loc = best）一般都用这个来决定label的位置。</p>
+<p>在Matplotlib中绘制图像：</p>
+<p>pyplot里面有很多图类型库，直接调用＋参数就可。</p>
+<p><strong>Pandas绘图</strong></p>
+<p><strong>pandas绘图有一个很好的地方就是，它的本来读取的数据就已经很有格式化了。有行有列，这样再加上已经造好的matplotlib轮子，绘图会变得很简单很简单。</strong></p>
+<p>大体分为两种 Series和DataFrame绘图。</p>
+<p>Series的索引对象会自动传到Matplotlib，作为图像的X轴。</p>
+<p>DataFrame的plot会自动给<strong>每一列数据</strong>绘制一条线。</p>
+<p>绘图中不加参数，默认为折线图。需要绘制别的图就要加不同的参数：</p>
+<p>1.柱状图，plot（kind = ‘bar’）</p>
+<p>2.密度分布图，plot（kind = ‘kde’）</p>
+<p>关于散状的scatter图，pandas有自带的pd.scatter_martrix()</p>
+<p>举个例子：pd.scatter_matrix(data,diagonal =‘kde’，color =‘k’，alpha = 0.3）</p>
+<p><strong>处理数据高级运用：</strong></p>
+<p>1.合并数据集</p>
+<p>数据集的合并或连接运算是<strong>通过一个或多个键将行连接起来的</strong>。</p>
+<p>pandas的merge函数：（下面默认data都是创建好的DataFrame格式）</p>
+<p>pd.merge（data1，data2）（没有指定的话，会自动将<strong>重叠的列名当做键</strong>进行连接，比如共享一个key列）</p>
+<p>合并的方式有很多种，默认为 inner（取数据之间的交集）还有别的：outer（并集），left、right</p>
+<p>合并的数据有单对多，多（一个键对n个值）对多（同样的键对m个值），单对多就是排出 <img src="https://www.zhihu.com/equation?tex=C_%7Bn%7D%5E%7B1%7D" srcset="/img/loading.gif" alt="[公式]"> ，多对多就是排出 <img src="https://www.zhihu.com/equation?tex=C_%7Bn%7D%5E%7Bm%7D" srcset="/img/loading.gif" alt="[公式]"></p>
+<p>merge函数中有个参数选项suffixes（用于指定附加重叠列名上的字符串（类似于改名吧））</p>
+<p>之前都是将列名作为键进行Data之间的连接，下面我们将索引变成连接的对象：</p>
+<p>1.一般的数据索引对象（无层次化）（left_<em>index=*True *或者</em>right_index = True ）</p>
+<p>2.层次化的索引对象（关于层次化索引已经在Pandas入门中介绍）：好像方法同上（后期具体分析哈）</p>
+<p>DataFrame中的join方法可以很方便的通过索引来连接不同的数据。例：data.join（data2，how =‘outer’）</p>
+<p>轴向合并：Pandas之concat函数</p>
+<p>pd.concat（data1，data2，….）可以用来合并没有重复索引值的数据Series，默认是在axis= 0.具体的方法看官方文档。</p>
+<p>重塑和轴向旋转</p>
+<p>1.重塑层次化索引：pd.stack（）将数据的列变为行</p>
+<p>pd.unstack（）将数据的行变为列</p>
+<p>2.移除重复数据：Series.drop_duplicates(默认全部列，可单独筛选[‘列1’,’列2’])</p>
+<p>重命名轴索引：</p>
+<p>1.data.index.map()(在括号里面可以直接修改轴的内容）</p>
+<p>2.创建数据集的转换版——data.rename（）</p>
+<p>1.可以直接用index，column直接赋值给dataFrame</p>
+<p>2.可以利用字典的格式，键为原本的某个index，值为新的index，进行赋值。</p>
+<p>离散化和元面划分：</p>
+<p>pd.cut(A,B)A为目标分组的类别，B为目标被分组的数据，返回的是一个二维数组（数组由每个数据所在的分组构成）+含有以目标分组为名的label属性。默认分组为闭区间（<strong>元面边界</strong>），如果右边需要开区间，添加参数 right = False）</p>
+<p>ps：如果cut传入的是面元数量，会根据数据的<strong>最小值和最大值进行面元均分</strong>。</p>
+<p>qcut和cut类似，不同之处在于他的元面内数据个数相同。（这两个函数很重要，用于分割数据，使数据离散化）</p>
+<p>排列和随机采样：</p>
+<p>1.numpy.random.permutation（）只是将dataFrame或Series中一列数据进行重新排序，具体的顺序应自己给出。np.random.permutation(5)——对于前五列随机排序</p>
+<p>一个选取子集的例子：df.take（np.random.permutation(len(df)[:3])</p>
+<p>计算指标/哑变量（用于机器学习、数学建模）</p>
+<p><strong>将分类变量转变为指标矩阵：如果有个DataFrame一列有7个不同的值，可派生出一个k列矩阵（值全为1或0）pd.get_dummies()</strong></p>
+<p>一个统计应用的tip：结合get_dummies和pd.cut等离散化函数。</p>
+<p><strong>数据聚合和分组运算</strong></p>
+<p>主要是用于对数据集进行分组，并对各个数据集进行某种func运算。</p>
+<p>pandas之GroupBy技术</p>
+<p>分组运算的过程：split—apply—combine</p>
+<p>df.[‘data1’].groupby[“key”]——获取data1中key的所在的列的数据（分组键），并返回一个GroupBy数据。然后可以根据GroupBy数据进行各种运算。</p>
+<p>分组键有以下几种：</p>
+<p>1.列表与数组，长度与待分组的数据长度相等</p>
+<p>2.表示DataFrame中某个列名的值</p>
+<p>3.字典或Series，给出值与分组名的关系</p>
+<p>4.函数</p>
+<p>也可以根据索引级别（多个索引的情况下）进行聚合，通过关键字 level = ‘index名’</p>
+<p>df.groupby[sadasd].size() 返回一个含有分组大小的Series.</p>
+<p>数据聚合：</p>
+<p>定义：能够从数组产生标量值的数据转换过程。（比如mean，sum，count等最基本的方法）</p>
+<p>对于Series或DataFrame列的聚合运算其实就是用</p>
+<p>1.aggregate（使用自定义函数）</p>
+<p>2.mean，sum等方法</p>
+<p>更多的其他分组运算：</p>
+<p>1.在GroupBy上使用transform方法(将一个函数应用到各个分组，然后将结果放置到适当的位置上） dataframe.groupby(‘key’).transform(np.mean)——这里就是np的平均值方法。</p>
+<p>2.apply（对对象的拆分-应用-合并）</p>
+<p>小例子：随机采样和排列</p>
+<p>从一个大数据集中随机抽取样本以进行蒙特卡罗模拟。</p>
+<p>np.random.permutation（N）的前K个元素。K为期望的样本大小，N为完整数据的大小。</p>
+<p>交叉表：crosstab 用于计算分组频率的特殊透视表</p>
+<p>pd.crosstab(data.index1,data.index2,margins = True) 前面两个参数可以是数组、Series或者数组列表。</p>
+<p><strong>数据加载、存储与文件格式</strong></p>
+<p><strong>输入输出常分为几个类：</strong></p>
+<p>**1.**读取文本文件或其他更高效的磁盘存储格式</p>
+<p>2.加载数据库中的数据，利用web API操作网络资源</p>
+<p>pandas有几种可以读取数据的方法，用的比较多的：</p>
+<p>1.pd.read_csv(csv文件），默认分割符号为逗号的文件</p>
+<p>2.pd.read_table(csv文件，sep = ‘分割标志’）</p>
+<p>遇到没有标题行的文件，我们可以自己设置标题 pd.read_csv(文件名，names = [‘a’,’b’,’c’,’d….]</p>
+<p>希望将多个列做成一个层次化索引，传入列名组成的列表：</p>
+<p>pd.read<em>csv(文件，</em>index_col= [‘key’1,’key2’]</p>
+<p>需要处理有缺失数据的dataframe时，可以传递参数na_values</p>
+<p>pd.read<em>csv(‘文件名’，</em>na_values= [‘NULL’]) 这个方括号很重要，每次我都容易忘掉。</p>
+<p><strong>当文件特别大，不便于一次读取时，可以用 nrow =n，来选择先读取n行。</strong></p>
+<p>书p168有一个很好的例子，先选数据，然后利用循环进行聚合。</p>
+<p>如何将数据写到文本呢——data.to_csv(文件）</p>
+<p>读取Microsoft Excel文件：</p>
+<p>pd.ExcelFile（‘data.xls’）——创建一个excelfile实例</p>
+<p>pd.ExcelFile.parse（‘sheet1’）读取存放在某个工作表的数据</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/20/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E5%BF%83%E5%BE%97%EF%BC%89/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">深入浅出数据分析（心得）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/20/Python%E5%AD%A6%E4%B9%A0%EF%BC%88%E7%BB%AD%EF%BC%89/">
+                        <span class="hidden-mobile">Python学习（续）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
